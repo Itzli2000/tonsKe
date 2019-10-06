@@ -21,8 +21,8 @@ Editor de texto (Sublime, Atom)
 
 ### Instalación 🔧
 
-_Descarga el proyecto como archivo comprimido (.zip)_
-_Ó utiliza la linea de comandos para realizar la descarga a tu carpeta seleccionada_
+_Descarga el proyecto como archivo comprimido (.zip)
+Ó utiliza la linea de comandos para realizar la descarga a tu carpeta seleccionada_
 
 _git clone..._
 
@@ -33,10 +33,10 @@ Abrelo con tu editor de texto y comienza a trabajar.
 
 ## Edición de estilos ⚙️
 
-_El proyecto se realiza utilizando SASS como precompilador de estilos._
-_Para que los estilos sean correctamente aplicados, debes compilar los_
-_archivos SASS a un archivo CSS normal, el cual es leido desde el header_
-_del archivo index.html_
+_El proyecto se realiza utilizando SASS como precompilador de estilos.
+Para que los estilos sean correctamente aplicados, debes compilar los
+archivos SASS a un archivo CSS normal, el cual es leido desde el header
+del archivo index.html_
 
 ```
 sass --watch styles.scss:styles.css
@@ -58,8 +58,8 @@ _ASSETS, en el cual se almacena cualquier archivo a ser utilizado en la pagina_
 
 ## Deployment 📦
 
-_El deploy del proyecto debe realizarse desde la rama MASTER del repositorio_
-_Todos los archivos deben migrarse al host final_
+_El deploy del proyecto debe realizarse desde la rama MASTER del repositorio.
+Todos los archivos deben migrarse al host final_
 
 ## Construido con 🛠️
 
@@ -67,6 +67,7 @@ _HTML, SASS, JavaScript_
 
 * [HTML5](https://developer.mozilla.org/es/docs/HTML/HTML5) 
 * [SASS](https://sass-lang.com/)
+* [BOOTSTRAP 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/)
 
 ## Autores ✒️
 

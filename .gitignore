@@ -35,3 +35,10 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# SASS cache files #
+######################
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
