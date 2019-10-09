@@ -1,5 +1,75 @@
+:root {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "../fonts/AvenirCondensedBold";
+  src: url("AvenirNextCondensed-Bold-01.eot");
+  src: url("AvenirNextCondensed-Bold-01.woff2") format("woff2"), url("AvenirNextCondensed-Bold-01.woff") format("woff"), url("AvenirNextCondensed-Bold-01.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "../fonts/AvenirCondensedMedium";
+  src: url("AvenirNextCondensed-Medium-06.eot");
+  src: url("AvenirNextCondensed-Medium-06.woff2") format("woff2"), url("AvenirNextCondensed-Medium-06.woff") format("woff"), url("AvenirNextCondensed-Medium-06.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 body {
-  background-color: #FFFFFF;
+  font-size: 3.25rem;
+  background-color: #ffce00;
+  font-family: "AvenirCondensedBold", sans-serif;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #1c1507;
+  font-family: "AvenirCondensedMedium", sans-serif !important;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.25rem;
+  color: #1c1507;
+  font-family: "AvenirCondensedMedium", sans-serif !important;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #1c1507;
+  font-family: "AvenirCondensedMedium", sans-serif !important;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.125rem;
+  color: #1c1507;
+  font-family: "AvenirCondensedMedium", sans-serif !important;
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 0.875rem;
+  color: #1c1507;
+  font-family: "AvenirCondensedMedium", sans-serif !important;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 0.75rem;
+  color: #1c1507;
+  font-family: "AvenirCondensedMedium", sans-serif !important;
+  font-weight: 600;
+}
+
+p {
+  color: #1c1507;
+}
+
+a, label {
+  color: #4D4D4D;
 }
 
 /*# sourceMappingURL=styles.css.map */

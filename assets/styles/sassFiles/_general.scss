@@ -1,3 +1,53 @@
+:root {
+	font-size: $root_fz;
+}
+@include fontFace('../fonts/AvenirCondensedBold','AvenirNextCondensed-Bold-01');
+@include fontFace('../fonts/AvenirCondensedMedium','AvenirNextCondensed-Medium-06');
 body {
-	background-color: #FFFFFF;
+	font-size: $body_fz;
+	background-color: $primary;
+	font-family: 'AvenirCondensedBold', sans-serif;
+}
+
+h1 { 
+	font-size: $h1_fz; 
+	color: $text_color; 
+	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-weight: 600;
+}
+h2 { 
+	font-size: $h2_fz; 
+	color: $text_color; 
+	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-weight: 600;
+}
+h3 { 
+	font-size: $h3_fz; 
+	color: $text_color; 
+	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-weight: 600;
+}
+h4 { 
+	font-size: $h4_fz; 
+	color: $text_color; 
+	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-weight: 600;
+}
+h5 { 
+	font-size: $h5_fz; 
+	color: $text_color; 
+	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-weight: 600;
+}
+h6 { 
+	font-size: $h6_fz; 
+	color: $text_color; 
+	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-weight: 600;
+}
+p {
+	color: $text_color;
+}
+a, label {
+	color: $link_color;
 }
