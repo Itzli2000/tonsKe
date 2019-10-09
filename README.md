@@ -76,4 +76,3 @@ _HTML, SASS, JavaScript_
 
 
 ---
-⌨️ con ❤️ por [Villanuevand](https://github.com/Villanuevand) 😊
