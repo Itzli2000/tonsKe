@@ -1,4 +1,7 @@
 .information_card {
+	margin: auto;
+	margin-top: 6rem;
+	max-width: 1090px;
 	@include boxShadowMixin(
 		$offX: map-get($main_shadow, 'offX'),
 		$offY: map-get($main_shadow, 'offY'),
@@ -9,10 +12,14 @@
 		);
 	padding: 5rem;
 	text-align: center;
-	span {
-		font-family: 'AvenirHeavy';
+	p {
+		margin: 0;
+		span {
+			font-family: 'AvenirHeavy';
+		}
 	}
 	.services_container {
+		margin-top: 5rem;
 		.service {
 			width: 161px;
 			height: 161px;
