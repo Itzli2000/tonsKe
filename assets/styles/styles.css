@@ -1,5 +1,160 @@
+:root {
+  font-size: 16px;
+}
+
+@font-face {
+  font-family: "AvenirHeavy";
+  src: url("../fonts/Avenir-HeavyOblique.eot");
+  src: url("../fonts/Avenir-HeavyOblique.woff2") format("woff2"), url("../fonts/Avenir-HeavyOblique.woff") format("woff"), url("../fonts/Avenir-HeavyOblique.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirMedium";
+  src: url("../fonts/Avenir-Medium.eot");
+  src: url("../fonts/Avenir-Medium.woff2") format("woff2"), url("../fonts/Avenir-Medium.woff") format("woff"), url("../fonts/Avenir-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirBook";
+  src: url("../fonts/Avenir-Book.eot");
+  src: url("../fonts/Avenir-Book.woff2") format("woff2"), url("../fonts/Avenir-Book.woff") format("woff"), url("../fonts/Avenir-Book.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  font-size: 3.25rem;
+  background-color: #ffce00;
+  font-family: "AvenirMedium";
+}
+
+h1 {
+  font-size: 3rem;
+  color: #1c1507;
+  font-family: "AvenirHeavy";
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.25rem;
+  color: #1c1507;
+  font-family: "AvenirHeavy";
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #1c1507;
+  font-family: "AvenirHeavy";
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 1.125rem;
+  color: #1c1507;
+  font-family: "AvenirHeavy";
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 0.875rem;
+  color: #1c1507;
+  font-family: "AvenirHeavy";
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 0.75rem;
+  color: #1c1507;
+  font-family: "AvenirHeavy";
+  font-weight: 600;
+}
+
+p {
+  color: #1c1507;
+}
+
+a, label {
+  font-family: "AvenirBook";
+  color: #4D4D4D;
+  font-size: 1.3875rem;
+}
+
+a {
+  transition: all 0.15s ease-in-out;
+}
+a svg {
+  transition: fill 0.15s ease-in-out;
+}
+a:hover {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+a:hover svg path {
+  fill: #FFFFFF;
+}
+
+#page_container {
+  max-width: 1920;
+  margin: auto;
+}
+#page_container .inner_page {
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+}
+
+.header_section object.logo {
+  width: 100%;
+  max-width: 183px;
+}
+.header_section .description svg.mail {
+  margin-left: 1rem;
+  max-width: 28px;
+}
+
+.footer_section {
+  margin-top: 3.125rem;
+}
+.footer_section svg {
+  width: 31px;
+  height: auto;
+  margin: 0.5rem 0;
+}
+
+.information_card {
+  margin: auto;
+  margin-top: 6rem;
+  max-width: 1090px;
+  -webkit-box-shadow: 0rem 0.3125rem 2.35rem 0.15rem rgba(31, 30, 30, 0.27);
+  -moz-box-shadow: 0rem 0.3125rem 2.35rem 0.15rem rgba(31, 30, 30, 0.27);
+  box-shadow: 0rem 0.3125rem 2.35rem 0.15rem rgba(31, 30, 30, 0.27);
+  padding: 5rem;
+  text-align: center;
+}
+.information_card p {
+  margin: 0;
+}
+.information_card p span {
+  font-family: "AvenirHeavy";
+}
+.information_card .services_container {
+  margin-top: 5rem;
+}
+.information_card .services_container .service {
+  width: 161px;
+  height: 161px;
   background-color: #FFFFFF;
+  border-radius: 100%;
+}
+.information_card .services_container .plus {
+  font-weight: bold;
+  font-size: 1.625rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

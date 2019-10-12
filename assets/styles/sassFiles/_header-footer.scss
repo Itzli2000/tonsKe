@@ -1,0 +1,21 @@
+.header_section {
+	object.logo {
+		width: 100%;
+		max-width: 183px;
+	}
+	.description {
+		svg.mail {
+			margin-left: 1rem;
+			max-width: 28px;
+		}
+	}
+}
+
+.footer_section {
+	margin-top: 3.125rem;
+	svg {
+		width: 31px;
+		height: auto;
+		margin: 0.5rem 0;
+	}
+}
