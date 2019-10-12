@@ -1,53 +1,90 @@
 :root {
 	font-size: $root_fz;
 }
-@include fontFace('../fonts/AvenirCondensedBold','AvenirNextCondensed-Bold-01');
-@include fontFace('../fonts/AvenirCondensedMedium','AvenirNextCondensed-Medium-06');
+
+@include fontFace($src:'../fonts/Avenir-HeavyOblique',$family:'AvenirHeavy');
+@include fontFace($src:'../fonts/Avenir-Medium',$family:'AvenirMedium');
+@include fontFace($src:'../fonts/Avenir-Book',$family:'AvenirBook');
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	font-size: $body_fz;
 	background-color: $primary;
-	font-family: 'AvenirCondensedBold', sans-serif;
+	font-family: 'AvenirMedium';
 }
 
 h1 { 
 	font-size: $h1_fz; 
 	color: $text_color; 
-	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
+
 h2 { 
 	font-size: $h2_fz; 
 	color: $text_color; 
-	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
+
 h3 { 
 	font-size: $h3_fz; 
 	color: $text_color; 
-	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
+
 h4 { 
 	font-size: $h4_fz; 
 	color: $text_color; 
-	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
+
 h5 { 
 	font-size: $h5_fz; 
 	color: $text_color; 
-	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
+
 h6 { 
 	font-size: $h6_fz; 
 	color: $text_color; 
-	font-family: 'AvenirCondensedMedium', sans-serif !important;
+	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
+
 p {
 	color: $text_color;
 }
+
 a, label {
+	font-family: 'AvenirBook';
 	color: $link_color;
+	font-size: $link_fz;
+}
+
+a {
+	transition: all 0.15s ease-in-out;
+	&:hover {
+		text-decoration: none;
+		color: $white;
+		svg path {
+			fill: $white;
+		}
+	}
+}
+
+#page_container {
+	max-width: 1920;
+	margin: auto;
+	.inner_page {
+		width: 100%;
+		max-width: 1170px;
+		margin: auto;
+	}
 }
