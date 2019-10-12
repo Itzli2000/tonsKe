@@ -60,6 +60,10 @@ h6 {
 
 p {
 	color: $text_color;
+	margin: 0;
+	span {
+		font-family: 'AvenirHeavy';
+	}
 }
 
 a, label {
@@ -87,7 +91,7 @@ a {
 	margin: auto;
 	.inner_page {
 		width: 100%;
-		max-width: 1170px;
+		max-width: 1300px;
 		margin: auto;
 	}
 }
