@@ -1,0 +1,134 @@
+.second_section_container {
+	margin: auto;
+	position: relative;
+	p {
+		font-size: $paragraph;
+		text-align: right;
+	}
+	.square_text {
+		background: $white;
+		position: absolute;
+		height: 100%;
+		width: 250px;
+		right: calc(-250px - 5rem);
+		background-color: $white;
+	}
+	@media only screen and (max-width: 1440px) {
+		margin: 0;
+		// margin-top: 6rem;
+		margin-left: 4rem;
+		max-width: 1000px;
+		p {
+			font-size: 1rem;
+		}
+		.square_text {
+			right: calc(-250px - 4rem);
+		}
+	}
+}
+
+.third_section_container {
+	margin-left: 1.8rem;
+	position: relative;
+	max-width: 900px;
+	p {
+		font-size: $paragraph;
+	}
+	.square_text {
+		background: $white;
+		position: absolute;
+		height: 250px;
+		width: 250px;
+		top: -50px;
+		left: calc(-260px - 5rem);
+		background-color: $white;
+	}
+	@media only screen and (max-width: 1440px) {
+		margin-left: 16rem;
+		max-width: 700px;
+		p {
+			font-size: 1rem;
+		}
+		.square_text {
+			right: calc(-250px - 4rem);
+		}
+	}
+}
+
+.fourth_section_container {
+	margin-left: 1.8rem;
+	position: relative;
+	.section_header {
+			height: 130px;
+		}
+	.advantages_card {
+		margin: auto;
+		max-width: 1090px;
+		background-color: $white;
+		@include boxShadowMixin(
+			$offX: map-get($main_shadow, 'offX'),
+			$offY: map-get($main_shadow, 'offY'),
+			$blur: map-get($main_shadow, 'blur'),
+			$spread: map-get($main_shadow, 'spread'),
+			$color: map-get($main_shadow, 'color'),
+			$alpha: map-get($main_shadow, 'alpha')
+			);
+		padding: 5rem;
+		text-align: center;
+		.adventage {
+			width: 90px;
+			height: 90px;
+			border-radius: 100px;
+			display: inline-block;
+			background-color: $text_color;
+			svg {
+				width: 70%;
+				height: auto;
+				path {
+					fill: $white;
+				}
+			}
+		}
+		p {
+			font-size: 1.3rem;
+			display: inline-block;
+		}
+	}
+	@media only screen and (max-width: 1440px) {
+		.section_header {
+			height: 100px;
+		}
+		.advantages_card {
+			padding: 3rem;
+		}
+	}
+}
+
+.fifth_section_container {
+	margin: auto;
+	position: relative;
+	p {
+		font-size: $paragraph;
+		text-align: left;
+	}
+	.square_text {
+		background: $white;
+		position: absolute;
+		height: 100%;
+		width: 250px;
+		right: calc(-250px - 5rem);
+		background-color: $white;
+	}
+	@media only screen and (max-width: 1440px) {
+		margin: 0;
+		// margin-top: 6rem;
+		margin-left: 4rem;
+		max-width: 1000px;
+		p {
+			font-size: 1rem;
+		}
+		.square_text {
+			right: calc(-250px - 4rem);
+		}
+	}
+}

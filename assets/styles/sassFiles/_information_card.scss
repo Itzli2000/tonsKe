@@ -1,6 +1,5 @@
 .information_card {
 	margin: auto;
-	margin-top: 6rem;
 	max-width: 1090px;
 	@include boxShadowMixin(
 		$offX: map-get($main_shadow, 'offX'),
@@ -13,7 +12,7 @@
 	padding: 5rem;
 	text-align: center;
 	.services_container {
-		margin-top: 5rem;
+		margin-top: 2rem;
 		.service {
 			width: 161px;
 			height: 161px;
@@ -24,5 +23,8 @@
 			font-weight: bold;
 			font-size: 1.625rem;
 		}
+	}
+	@media only screen and (max-width: 1440px) {
+		padding: 3rem;
 	}
 }
