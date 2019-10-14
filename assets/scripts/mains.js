@@ -1,1 +1,3 @@
-console.log('Listo')
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
