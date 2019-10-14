@@ -26,4 +26,39 @@
 		margin-top: -7rem;
 		margin-bottom: 5rem;
 	}
+	&.sixth_section {
+		position: absolute;
+		bottom: 5rem;
+	}
+}
+
+footer {
+	.footer_badge {
+		display: inline-block;
+		background-color: $text_color;
+		padding: 0.5rem 1rem;
+		border-radius: 10px;
+		p {
+			color: $white;
+			font-size: 1.25rem;
+		}
+	}
+	.adress_container {
+		// padding: 1rem;
+		margin: 0 auto;
+		a, span {
+			color: $text_color;
+			font-size: 1.25rem;
+			transition: all 0.25s ease-in-out;
+		}
+		a:hover {
+			color: $white;
+		}
+		svg path {
+			transition: all 0.25s ease-in-out;
+			&:hover {
+				fill: $white;
+			}
+		}
+	}
 }
