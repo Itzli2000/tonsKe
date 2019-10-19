@@ -1,0 +1,304 @@
+.mobile {
+  .plus_btn {
+    position: fixed;
+    border-radius: 100%;
+    z-index: 999999;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    top: 1rem;
+    right: 1rem;
+    transition: all 0.2s ease-in-out;
+    a {
+      font-weight: bold;
+      font-size: 1rem;
+      color: $full_black;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $primary;
+      }
+    }
+  }
+  .mobile_menu {
+    width: 150px;
+    height: auto;
+    position: fixed;
+    right: -400px;
+    top: 0;
+    z-index: 9999999;
+    margin-right: 2rem;
+    margin-top: 2rem;
+    background-color: $primary;
+    transition: all 0.25s ease-in-out;
+    img {
+      width: 100%;
+    }
+    ul {
+      list-style: none;
+      line-height: 1rem;
+      padding: 0;
+      @include boxShadowMixin(
+       $offX: map-get($main_shadow, 'offX'),
+       $offY: map-get($main_shadow, 'offY'),
+       $blur: map-get($main_shadow, 'blur'),
+       $spread: map-get($main_shadow, 'spread'),
+       $color: map-get($main_shadow, 'color'),
+       $alpha: map-get($main_shadow, 'alpha')
+       );
+      li {
+        padding: 0.5rem;
+        padding-left: 3.5rem;
+        position: relative;
+        a {
+          font-size: 1rem;
+        }
+        &:after {
+          content: '+';
+          font-size: 1rem;
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          border-radius: 100%;
+          left: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:first-of-type {
+          border-bottom: 1px solid;
+          &:after {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 1px solid;
+          }
+        }
+        &:last-of-type {
+          border-bottom: 1px solid;
+          &:after {
+            content: '';
+            background-image: url('./../images/mail.svg');
+            background-size: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 0;
+            left: 0.6rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        &:before {
+          position: absolute;
+          content: '';
+          width: 2.5rem;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-color: rgba($white, 0.5);
+        }
+        &:hover {
+          background-color: rgba($full_black, 0.5);
+        }
+      }
+    }
+    .social_container {
+      padding: 0.5rem;
+      svg {
+        width: 100%;
+        height: auto;
+      }
+      img {
+        width: auto;
+        height: 100%;
+        max-height: 23.5px;
+      }
+    }
+    &.active {
+      right: 0;
+    }
+  }
+  .mobile_container {
+    min-height: 100vh;
+    position: relative;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    .owl-carousel {
+      position: relative;
+      min-height: 100vh;
+      .owl-item {
+        .inner_view {
+          min-height: 100vh;
+          position: relative;
+        }
+      }
+      .owl-nav {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 1.5rem;
+        .owl-prev {
+          line-height: 1.5rem;
+          float: left;
+          margin-left: 1rem;
+          transition: all 0.2s ease-in-out;
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: transparent;
+            color: $white;
+          }
+        }
+        .owl-next {
+          line-height: 1.5rem;
+          float: right;
+          margin-right: 1rem;
+          transition: all 0.2s ease-in-out;
+          &:hover,
+          &:focus,
+          &:active {
+            background-color: transparent;
+            color: $white;
+          }
+        }
+      }
+      .owl-dots {
+        line-height: 1.5rem;
+        margin-bottom: 1.5rem;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .section_footer {
+      p {
+        font-size: 1rem;
+      }
+    }
+    .information_card {
+      padding: 1rem;
+      p {
+        word-break: break-word;
+        text-align: left;
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+        @media only screen and (max-width: 320px) {
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+    .advantages_card {
+      text-align: center;
+      .adventage {
+        width: 80px;
+        height: 80px;
+        border-radius: 100px;
+        display: inline-block;
+        background-color: $text_color;
+        margin-left: 10%;
+        img {
+          width: 50%;
+          height: auto;
+        }
+        @media only screen and (max-width: 350px) {
+          margin-left: 0;
+        }
+      }
+      p {
+        min-width: 200px;
+        font-size: 1rem;
+        display: inline-block;
+      }
+    }
+    .owl-concepto {
+      // .owl-item {
+      //   width: 100%;
+      // }
+      .inner_view {
+          background-size: cover;
+          background-position: center;
+        &.first {
+          background-image: url('./../images/concepto_mobile1.png');
+        }
+        &.second {
+          background-image: url('./../images/concepto_mobile2.png');
+        }
+      }
+    }
+    form {
+      margin: auto;
+      max-width: 1090px;
+      @include boxShadowMixin(
+        $offX: map-get($main_shadow, 'offX'),
+        $offY: map-get($main_shadow, 'offY'),
+        $blur: map-get($main_shadow, 'blur'),
+        $spread: map-get($main_shadow, 'spread'),
+        $color: map-get($main_shadow, 'color'),
+        $alpha: map-get($main_shadow, 'alpha')
+        );
+      padding: 2rem;
+      .form-group {
+        position: relative;
+        label {
+          display: inline-block;
+          width: 70px;
+          font-size: 1rem;
+          text-align: right;
+        }
+        input {
+          display: inline-block;
+          width: auto;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid rgba($full_black, 0.15);
+          border-radius: 0;
+        }
+      }
+      button.btn {
+        font-family: 'AvenirHeavy';
+        margin: auto;
+        margin-top: 3rem;
+        background-color: rgba($white, 0.5);
+        display: block;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 0;
+        @include boxShadowMixin(
+          $offX: map-get($main_shadow, 'offX'),
+          $offY: map-get($main_shadow, 'offY'),
+          $blur: map-get($main_shadow, 'blur'),
+          $spread: map-get($main_shadow, 'spread'),
+          $color: map-get($main_shadow, 'color'),
+          $alpha: map-get($main_shadow, 'alpha')
+          );
+      }
+    }
+  }
+}
+
+#mobile_third {
+  background-image: url('./../images/kehacemos_mobile.png');
+  background-size: cover;
+  background-position: center top;
+}
+#mobile_fourth {
+  background-image: url('./../images/color_mobile.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+#mobile_fifth {
+  background-image: url('./../images/ventajas_mobile.png');
+  background-size: cover;
+  background-position: center top;
+}
