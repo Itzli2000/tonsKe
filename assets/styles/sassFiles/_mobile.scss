@@ -1,0 +1,125 @@
+.mobile_container {
+  min-height: 100vh;
+  position: relative;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  .plus_btn {
+    position: absolute;
+    border-radius: 100%;
+    z-index: 999999;
+    width: 20px;
+    height: 20px;
+    background-color: $white;
+    top: 1rem;
+    right: 1rem;
+    transition: all 0.2s ease-in-out;
+    a {
+      font-weight: bold;
+      font-size: 1rem;
+      color: $full_black;
+      &:hover,
+      &:focus,
+      &:active {
+        color: $primary;
+      }
+    }
+  }
+  .owl-carousel {
+    position: relative;
+    min-height: 100vh;
+    .owl-item {
+      .inner_view {
+        min-height: 100vh;
+        position: relative;
+      }
+    }
+    .owl-nav {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 1.5rem;
+      .owl-prev {
+        line-height: 1.5rem;
+        float: left;
+        margin-left: 1rem;
+        transition: all 0.2s ease-in-out;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+          color: $white;
+        }
+      }
+      .owl-next {
+        line-height: 1.5rem;
+        float: right;
+        margin-right: 1rem;
+        transition: all 0.2s ease-in-out;
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+          color: $white;
+        }
+      }
+    }
+    .owl-dots {
+      line-height: 1.5rem;
+      margin-bottom: 1.5rem;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  form {
+    margin: auto;
+    max-width: 1090px;
+    @include boxShadowMixin(
+      $offX: map-get($main_shadow, 'offX'),
+      $offY: map-get($main_shadow, 'offY'),
+      $blur: map-get($main_shadow, 'blur'),
+      $spread: map-get($main_shadow, 'spread'),
+      $color: map-get($main_shadow, 'color'),
+      $alpha: map-get($main_shadow, 'alpha')
+      );
+    padding: 2rem;
+    .form-group {
+      position: relative;
+      label {
+        display: inline-block;
+        width: 70px;
+        font-size: 1rem;
+        text-align: right;
+      }
+      input {
+        display: inline-block;
+        width: auto;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid rgba($full_black, 0.15);
+        border-radius: 0;
+      }
+    }
+    button.btn {
+      font-family: 'AvenirHeavy';
+      margin: auto;
+      margin-top: 3rem;
+      background-color: rgba($white, 0.5);
+      display: block;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 0;
+      @include boxShadowMixin(
+        $offX: map-get($main_shadow, 'offX'),
+        $offY: map-get($main_shadow, 'offY'),
+        $blur: map-get($main_shadow, 'blur'),
+        $spread: map-get($main_shadow, 'spread'),
+        $color: map-get($main_shadow, 'color'),
+        $alpha: map-get($main_shadow, 'alpha')
+        );
+    }
+  }
+}
