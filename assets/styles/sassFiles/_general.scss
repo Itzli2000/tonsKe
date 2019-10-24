@@ -14,6 +14,10 @@ body {
 	font-size: $body_fz;
 	background-color: $primary;
 	font-family: 'AvenirMedium';
+	background-image: url('../images/BG_tonske.jpg');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 h1 { 
@@ -95,15 +99,16 @@ input, a, button {
 }
 
 #page_container {
-	max-width: 1920;
+	max-width: 1920px;
 	margin: auto;
 	.inner_page {
 		width: 100%;
-		max-width: 1300px;
 		margin: auto;
+		position: relative;
 		.section_container {
 			min-height: 100vh;
 			position: relative;
+			padding-top: 9rem;
 		}
 	}
 }

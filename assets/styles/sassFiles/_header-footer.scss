@@ -1,9 +1,17 @@
 .header_section {
-	object.logo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: $primary;
+	width: 100%;
+	z-index: 999;
+	img.logo {
 		width: 100%;
 		max-width: 183px;
+		margin: 2rem 0;
 	}
 	.description {
+		font-size: $link_fz;
 		svg.mail {
 			margin-left: 1rem;
 			max-width: 28px;
@@ -13,6 +21,9 @@
 
 .footer_section {
 	margin-top: 3.125rem;
+	width: 100%;
+	max-width: 1300px;
+	margin: auto;
 	svg {
 		width: 31px;
 		height: auto;
@@ -20,6 +31,8 @@
 	}
 	&.fourth_section {
 		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
 		bottom: 2rem;
 	}
 	&.fifth_section {
@@ -28,6 +41,8 @@
 	}
 	&.sixth_section {
 		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
 		bottom: 5rem;
 	}
 }
@@ -54,11 +69,22 @@ footer {
 		a:hover {
 			color: $white;
 		}
-		svg path {
-			transition: all 0.25s ease-in-out;
-			&:hover {
-				fill: $white;
+		svg {
+			width: auto;
+			height: 20px;
+			path {
+				transition: all 0.25s ease-in-out;
+				&:hover {
+					fill: $white;
+				}
 			}
+		}
+	}
+	.footer_logo {
+		p {
+			font-family: 'AvenirBook';
+			font-size: 1.048rem;
+			line-height: 1rem;
 		}
 	}
 }
