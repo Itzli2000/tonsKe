@@ -1,4 +1,5 @@
 .second_section_container {
+	max-width: 900px;
 	margin: auto;
 	position: relative;
 	p {
@@ -28,7 +29,8 @@
 }
 
 .third_section_container {
-	margin-left: 1.8rem;
+		margin: auto;
+	// margin-left: 1.8rem;
 	position: relative;
 	max-width: 900px;
 	p {
@@ -56,7 +58,9 @@
 }
 
 .fourth_section_container {
-	margin-left: 1.8rem;
+	// margin-left: 1.8rem;
+	margin: auto;
+	max-width: 900px;
 	position: relative;
 	.section_header {
 		height: 130px;
@@ -104,6 +108,7 @@
 
 .fifth_section_container {
 	margin: auto;
+	max-width: 900px;
 	position: relative;
 	p {
 		font-size: $paragraph;
@@ -234,7 +239,30 @@
 	}
 }
 
-
+// #section_two {
+// 	background-image: url('../images/Bg_kehacemos.jpg');
+// 	background-size: contain;
+// 	background-position: center;
+// 	background-repeat: no-repeat;
+// }
+// #section_three {
+// 	background-image: url('../images/BG_objetivo.jpg');
+// 	background-size: contain;
+// 	background-position: center;
+// 	background-repeat: no-repeat;
+// }
+// #section_four {
+// 	background-image: url('../images/Bg_ventajas.jpg');
+// 	background-size: contain;
+// 	background-position: center;
+// 	background-repeat: no-repeat;
+// }
+// #section_five {
+// 	background-image: url('../images/Bg_concepto.jpg');
+// 	background-size: contain;
+// 	background-position: center;
+// 	background-repeat: no-repeat;
+// }
 
 
 
