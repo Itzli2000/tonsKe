@@ -10,9 +10,12 @@
 		background: $white;
 		position: absolute;
 		height: 100%;
-		width: 250px;
-		right: calc(-250px - 5rem);
+		width: 100%;
+		right: calc(-100% - 5rem);
 		background-color: $white;
+		p {
+			padding-left: 2rem;
+		}
 	}
 	@media only screen and (max-width: 1440px) {
 		margin: 0;
@@ -23,7 +26,7 @@
 			font-size: 1rem;
 		}
 		.square_text {
-			right: calc(-250px - 4rem);
+			// right: calc(-250px - 4rem);
 		}
 	}
 }
@@ -40,10 +43,13 @@
 		background: $white;
 		position: absolute;
 		height: 250px;
-		width: 250px;
+		width: 100%;
 		top: -50px;
-		left: calc(-260px - 5rem);
+		left: calc(-100% - 5rem);
 		background-color: $white;
+		p {
+			padding-right: 2rem;
+		}
 	}
 	@media only screen and (max-width: 1440px) {
 		margin-left: 16rem;
@@ -118,9 +124,12 @@
 		background: $white;
 		position: absolute;
 		height: 100%;
-		width: 250px;
-		right: calc(-250px - 5rem);
+		width: 100%;
+		right: calc(-100% - 5rem);
 		background-color: $white;
+		p {
+			padding-left: 2rem;
+		}
 	}
 	@media only screen and (max-width: 1440px) {
 		margin: 0;
@@ -131,7 +140,7 @@
 			font-size: 1rem;
 		}
 		.square_text {
-			right: calc(-250px - 4rem);
+			// right: calc(-250px - 4rem);
 		}
 	}
 }
@@ -152,7 +161,7 @@
 		&.btl { background-image: url('./../images/btl.png'); }
 		&:before {
 			content: "";
-			padding-bottom: 100%;
+			padding-bottom: 70%;
 			display: inline-block;
 			vertical-align: top;
 		}
