@@ -13,7 +13,7 @@ html {
 body {
 	font-size: $body_fz;
 	background-color: $primary;
-	font-family: 'AvenirMedium';
+	font-family: 'AvenirBook';
 	background-image: url('../images/BG_tonske.jpg');
 	background-size: contain;
 	background-position: center;
@@ -65,7 +65,7 @@ h6 {
 p {
 	color: $text_color;
 	margin: 0;
-
+	font-weight: normal;
 	span {
 		font-family: 'AvenirHeavy';
 	}

@@ -2,63 +2,91 @@
 	max-width: 900px;
 	margin: auto;
 	position: relative;
+
 	p {
 		font-size: $paragraph;
 		text-align: right;
 	}
+
 	.square_text {
 		background: $white;
 		position: absolute;
 		height: 100%;
-		width: 100%;
-		right: calc(-100% - 5rem);
+		width: 350px;
+		right: calc(-350px - 5rem);
 		background-color: $white;
+
 		p {
 			padding-left: 2rem;
 		}
 	}
+
 	@media only screen and (max-width: 1440px) {
 		margin: 0;
 		// margin-top: 6rem;
 		margin-left: 4rem;
 		max-width: 1000px;
+
 		p {
 			font-size: 1.5rem;
 		}
+
 		.square_text {
 			// right: calc(-250px - 4rem);
+		}
+	}
+
+	@media only screen and (max-width: 1024px) {
+		max-width: 700px;
+		margin: 0;
+		margin-left: 2rem;
+
+		p {
+			font-size: 1.1rem;
 		}
 	}
 }
 
 .third_section_container {
-		margin: auto;
+	margin: auto;
 	// margin-left: 1.8rem;
 	position: relative;
 	max-width: 900px;
+
 	p {
 		font-size: $paragraph;
 	}
+
 	.square_text {
 		background: $white;
 		position: absolute;
 		height: 250px;
-		width: 100%;
+		width: 350px;
 		top: -50px;
-		left: calc(-100% - 5rem);
+		left: calc(-350px - 5rem);
 		background-color: $white;
+
 		p {
 			padding-right: 2rem;
 		}
 	}
+
 	@media only screen and (max-width: 1440px) {
 		margin-left: 16rem;
 		max-width: 700px;
+
 		p {
 			font-size: 1.5rem;
 		}
+
 		.square_text {
 			right: calc(-250px - 4rem);
+		}
+	}
+
+	@media only screen and (max-width: 1024px) {
+		p {
+			font-size: 1.1rem;
 		}
 	}
 }
@@ -66,48 +94,58 @@
 .fourth_section_container {
 	// margin-left: 1.8rem;
 	margin: auto;
-	max-width: 900px;
+	max-width: 930px;
 	position: relative;
+
 	.section_header {
 		height: 130px;
 	}
+
 	.advantages_card {
 		margin: auto;
 		max-width: 1000px;
 		background-color: $white;
-		@include boxShadowMixin(
-			$offX: map-get($main_shadow, 'offX'),
+		@include boxShadowMixin($offX: map-get($main_shadow, 'offX'),
 			$offY: map-get($main_shadow, 'offY'),
 			$blur: map-get($main_shadow, 'blur'),
 			$spread: map-get($main_shadow, 'spread'),
 			$color: map-get($main_shadow, 'color'),
-			$alpha: map-get($main_shadow, 'alpha')
-			);
+			$alpha: map-get($main_shadow, 'alpha'));
 		padding: 5rem;
 		text-align: center;
+
 		.adventage {
 			width: 90px;
 			height: 90px;
 			border-radius: 100px;
 			display: inline-block;
 			background-color: $text_color;
+
 			img {
 				width: 50%;
 				height: auto;
 			}
 		}
+
 		p {
 			min-width: 250px;
 			font-size: 1.3rem;
 			display: inline-block;
 		}
 	}
+
 	@media only screen and (max-width: 1440px) {
 		.section_header {
 			height: 100px;
 		}
+
 		.advantages_card {
-			padding: 3rem;
+			padding: 5rem 3rem;
+		}
+	}
+	@media only screen and (max-width: 1024px) {
+		.advantages_card {
+			padding: 2rem 1.5rem;
 		}
 	}
 }
@@ -116,29 +154,35 @@
 	margin: auto;
 	max-width: 900px;
 	position: relative;
+
 	p {
 		font-size: $paragraph;
 		text-align: left;
 	}
+
 	.square_text {
 		background: $white;
 		position: absolute;
 		height: 100%;
-		width: 100%;
-		right: calc(-100% - 5rem);
+		width: 350px;
+		right: calc(-350px - 5rem);
 		background-color: $white;
+
 		p {
 			padding-left: 2rem;
 		}
 	}
+
 	@media only screen and (max-width: 1440px) {
 		margin: 0;
 		// margin-top: 6rem;
 		margin-left: 4rem;
 		max-width: 1000px;
+
 		p {
 			font-size: 1rem;
 		}
+
 		.square_text {
 			// right: calc(-250px - 4rem);
 		}
@@ -149,22 +193,43 @@
 	display: inline-grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-auto-rows: 1fr;
+
 	.grid-item {
 		position: relative;
 		background-size: cover;
 		background-position: center;
-		&.dg { background-image: url('./../images/dg.png'); }
-		&.editorial { background-image: url('./../images/editorial.png'); }
-		&.peope { background-image: url('./../images/peope.png'); }
-		&.mkt { background-image: url('./../images/mkt.png'); }
-		&.branding { background-image: url('./../images/branding.png'); }
-		&.btl { background-image: url('./../images/btl.png'); }
+
+		&.dg {
+			background-image: url('./../images/dg.png');
+		}
+
+		&.editorial {
+			background-image: url('./../images/editorial.png');
+		}
+
+		&.peope {
+			background-image: url('./../images/peope.png');
+		}
+
+		&.mkt {
+			background-image: url('./../images/mkt.png');
+		}
+
+		&.branding {
+			background-image: url('./../images/branding.png');
+		}
+
+		&.btl {
+			background-image: url('./../images/btl.png');
+		}
+
 		&:before {
 			content: "";
 			padding-bottom: 70%;
 			display: inline-block;
 			vertical-align: top;
 		}
+
 		.inner-grid {
 			position: absolute;
 			text-align: center;
@@ -177,27 +242,33 @@
 			border-radius: 100%;
 			font-size: 2rem;
 			line-height: 2.3rem;
+			@media only screen and (max-width: 1024px) {
+				width: 90px;
+				height: 90px;
+				font-size: 1rem;
+			}
 		}
 	}
 }
 
 .sixth_section_container {
 	position: relative;
+
 	form {
 		margin: auto;
 		max-width: 1090px;
-		@include boxShadowMixin(
-			$offX: map-get($main_shadow, 'offX'),
+		@include boxShadowMixin($offX: map-get($main_shadow, 'offX'),
 			$offY: map-get($main_shadow, 'offY'),
 			$blur: map-get($main_shadow, 'blur'),
 			$spread: map-get($main_shadow, 'spread'),
 			$color: map-get($main_shadow, 'color'),
-			$alpha: map-get($main_shadow, 'alpha')
-			);
+			$alpha: map-get($main_shadow, 'alpha'));
 		padding: 5rem;
+
 		.form-group {
 			position: relative;
 			min-height: 3rem;
+
 			label {
 				position: absolute;
 				left: 0;
@@ -206,6 +277,7 @@
 				z-index: 10;
 				padding-left: 1rem;
 			}
+
 			input {
 				position: absolute;
 				left: 0;
@@ -218,6 +290,7 @@
 				border-radius: 0;
 			}
 		}
+
 		button.btn {
 			font-family: 'AvenirHeavy';
 			margin: auto;
@@ -227,21 +300,26 @@
 			font-size: 1.5rem;
 			border: none;
 			border-radius: 0;
-			@include boxShadowMixin(
-				$offX: map-get($main_shadow, 'offX'),
+			@include boxShadowMixin($offX: map-get($main_shadow, 'offX'),
 				$offY: map-get($main_shadow, 'offY'),
 				$blur: map-get($main_shadow, 'blur'),
 				$spread: map-get($main_shadow, 'spread'),
 				$color: map-get($main_shadow, 'color'),
-				$alpha: map-get($main_shadow, 'alpha')
-				);
+				$alpha: map-get($main_shadow, 'alpha'));
 		}
 	}
+
 	.privacy {
 		position: absolute;
 		bottom: 1.5rem;
 		right: -160px;
 		line-height: 0.8rem;
+		@media only screen and (max-width: 1024px) {
+			position: relative;
+			bottom: 0;
+			right: 0;
+		}
+
 		a {
 			font-size: 1rem;
 		}
@@ -272,10 +350,3 @@
 // 	background-position: center;
 // 	background-repeat: no-repeat;
 // }
-
-
-
-
-
-
-
