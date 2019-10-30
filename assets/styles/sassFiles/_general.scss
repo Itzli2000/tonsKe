@@ -2,9 +2,9 @@
 	font-size: $root_fz;
 }
 
-@include fontFace($src:'../fonts/Avenir-HeavyOblique',$family:'AvenirHeavy');
-@include fontFace($src:'../fonts/Avenir-Medium',$family:'AvenirMedium');
-@include fontFace($src:'../fonts/Avenir-Book',$family:'AvenirBook');
+@include fontFace($src:'../fonts/Avenir-HeavyOblique', $family:'AvenirHeavy');
+@include fontFace($src:'../fonts/Avenir-Medium', $family:'AvenirMedium');
+@include fontFace($src:'../fonts/Avenir-Book', $family:'AvenirBook');
 
 html {
 	scroll-behavior: smooth;
@@ -20,44 +20,44 @@ body {
 	background-repeat: no-repeat;
 }
 
-h1 { 
-	font-size: $h1_fz; 
-	color: $text_color; 
+h1 {
+	font-size: $h1_fz;
+	color: $text_color;
 	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
 
-h2 { 
-	font-size: $h2_fz; 
-	color: $text_color; 
+h2 {
+	font-size: $h2_fz;
+	color: $text_color;
 	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
 
-h3 { 
-	font-size: $h3_fz; 
-	color: $text_color; 
+h3 {
+	font-size: $h3_fz;
+	color: $text_color;
 	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
 
-h4 { 
-	font-size: $h4_fz; 
-	color: $text_color; 
+h4 {
+	font-size: $h4_fz;
+	color: $text_color;
 	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
 
-h5 { 
-	font-size: $h5_fz; 
-	color: $text_color; 
+h5 {
+	font-size: $h5_fz;
+	color: $text_color;
 	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
 
-h6 { 
-	font-size: $h6_fz; 
-	color: $text_color; 
+h6 {
+	font-size: $h6_fz;
+	color: $text_color;
 	font-family: 'AvenirHeavy';
 	font-weight: 600;
 }
@@ -65,12 +65,14 @@ h6 {
 p {
 	color: $text_color;
 	margin: 0;
+
 	span {
 		font-family: 'AvenirHeavy';
 	}
 }
 
-a, label {
+a,
+label {
 	font-family: 'AvenirBook';
 	color: $link_color;
 	font-size: $link_fz;
@@ -78,19 +80,25 @@ a, label {
 
 a {
 	transition: all 0.15s ease-in-out;
+
 	svg {
 		transition: fill 0.15s ease-in-out;
 	}
+
 	&:hover {
 		text-decoration: none;
 		color: $white;
+
 		svg path {
 			fill: $white;
 		}
 	}
 }
 
-input, a, button {
+input,
+a,
+button {
+
 	&:focus,
 	&:active {
 		outline: none !important;
@@ -98,17 +106,23 @@ input, a, button {
 	}
 }
 
-#page_container {
-	max-width: 1920px;
-	margin: auto;
-	.inner_page {
-		width: 100%;
+.desktop {
+	overflow: hidden;
+
+	#page_container {
+		max-width: 1920px;
 		margin: auto;
-		position: relative;
-		.section_container {
-			min-height: 100vh;
+
+		.inner_page {
+			width: 100%;
+			margin: auto;
 			position: relative;
-			padding-top: 9rem;
+
+			.section_container {
+				min-height: 100vh;
+				position: relative;
+				padding-top: 9rem;
+			}
 		}
 	}
 }
@@ -116,6 +130,7 @@ input, a, button {
 .privacy_content {
 	p {
 		font-size: 1.3rem;
+
 		span.title {
 			font-size: 1.5rem;
 		}
