@@ -1,3 +1,12 @@
+.owl-theme .owl-dots .owl-dot span {
+  border: 1px solid #000;
+  background: $white !important;
+}
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: $primary !important;
+}
+
 .mobile {
   .plus_btn {
     position: fixed;
@@ -6,8 +15,8 @@
     width: 20px;
     height: 20px;
     background-color: $white;
-    top: 1rem;
-    right: 1rem;
+    top: 2rem;
+    right: 1.5rem;
     transition: all 0.2s ease-in-out;
     a {
       font-weight: bold;
@@ -128,15 +137,50 @@
   .mobile_container {
     min-height: 100vh;
     position: relative;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
     .owl-carousel {
       position: relative;
       min-height: 100vh;
+      height: 100%;
       .owl-item {
         .inner_view {
           min-height: 100vh;
           position: relative;
+          background-position: center;
+          background-size: cover;
+          .mobile_slider_badge {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            height: 90px;
+            background-color: #fff;
+            border-radius: 100%;
+            font-size: 1.3rem;
+            line-height: 1.3rem;
+            &.bottom {
+              bottom: 2.5rem;
+            }
+          }
+          &.slide_1 {
+            background-image: url('./../images/mobile/car1/slide_1.jpg');
+          }
+          &.slide_2 {
+            background-image: url('./../images/mobile/car1/slide_2.jpg');
+            .mobile_slider_badge {
+              background-color: $primary;
+            }
+          }
+          &.slide_3 {
+            background-image: url('./../images/mobile/car1/slide_3.jpg');
+          }
+          &.slide_4 {
+            background-image: url('./../images/mobile/car1/slide_4.jpg');
+            .mobile_slider_badge {
+              background-color: $full_black;
+              color: $white;
+            }
+          }
         }
       }
       .owl-nav {
@@ -181,32 +225,80 @@
       }
     }
     .section_footer {
-      p {
+      margin: 2rem auto;
+      p, a {
         font-size: 1rem;
       }
     }
+    .mobile_section_title {
+      position: absolute;
+      top: 1.5rem;
+      left: 1rem;
+      font-size: 1rem;
+      color: $link_color;
+    }
+    .mobile_section_content {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      width: 95%;
+      transform: translateX(-50%);
+      text-align: right;
+      img {
+        max-width: 170px;
+      }
+      p {
+        font-size: 1rem;
+        span {
+          font-size: 1.1rem;
+        }
+      }
+      &.top_align {
+        bottom: unset;
+        top: 3.5rem;
+        text-align: left;
+      }
+    }
+    .mobile_full_header {
+      background-color: $white;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
+    }
     .information_card {
       padding: 1rem;
+      margin: 0 auto;
+      img {
+        max-width: 150px;
+        display: block;
+        margin-right: auto;
+        margin-bottom: 1rem;
+      }
       p {
         word-break: break-word;
         text-align: left;
         font-size: 2.8rem;
         line-height: 2.8rem;
-        @media only screen and (max-width: 320px) {
-          font-size: 2.5rem;
+      }
+      @media only screen and (max-width: 320px) {
+        max-width: 90%;
+        margin: auto;
+        p {
+          font-size: 2.3rem;
           line-height: 2.5rem;
+          margin-bottom: 2rem;
         }
       }
     }
     .advantages_card {
       text-align: center;
       .adventage {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border-radius: 100px;
         display: inline-block;
         background-color: $text_color;
-        margin-left: 10%;
+        margin-left: 15%;
+        margin-bottom: 1rem;
         img {
           width: 50%;
           height: auto;
@@ -222,19 +314,78 @@
       }
     }
     .owl-concepto {
-      // .owl-item {
-      //   width: 100%;
-      // }
-      .inner_view {
-          background-size: cover;
-          background-position: center;
-        &.first {
-          background-image: url('./../images/concepto_mobile1.png');
+      .mobile_section_content_concept {
+        position: absolute;
+        bottom: 5rem;
+        left: 50%;
+        width: 95%;
+        transform: translateX(-50%);
+        text-align: right;
+        img {
+          max-width: 170px;
+          margin-left: auto;
+          margin-bottom: 5rem;
         }
-        &.second {
-          background-image: url('./../images/concepto_mobile2.png');
+        p {
+          font-size: 1rem;
+          span {
+            font-size: 1.1rem;
+          }
+        }
+        &.top_align {
+          bottom: unset;
+          top: 3.5rem;
+          text-align: left;
         }
       }
+      .mobile_slider_badge {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90px;
+        height: 90px;
+        background-color: #fff;
+        border-radius: 100%;
+        font-size: 1.3rem;
+        line-height: 1.3rem;
+        &.top {
+          top: 20%;
+        }
+        &.bottom {
+          bottom: 15%;
+        }
+      }
+      .inner_view {
+        background-size: contain;
+        background-position: center;
+        &.first {
+          background-image: url('./../images/mobile/car2/slide_1.jpg');
+        }
+        &.second {
+          background-image: url('./../images/mobile/car2/slide_2.jpg');
+        }
+        &.third {
+          background-image: url('./../images/mobile/car2/slide_3.jpg');
+        }
+        &.fourth {
+          background-image: url('./../images/mobile/car2/slide_4.jpg');
+        }
+        &.fifth {
+          background-image: url('./../images/mobile/car2/slide_5.jpg');
+        }
+        &.sixth {
+          background-image: url('./../images/mobile/car2/slide_6.jpg');
+        }
+        &.seventh {
+          background-image: url('./../images/mobile/car2/slide_7.jpg');
+        }
+      }
+    }
+    img.contact_title_image {
+      max-width: 200px;
+      display: block;
+      margin: auto;
     }
     form {
       margin: auto;
@@ -284,6 +435,17 @@
           );
       }
     }
+    .privacy {
+      position: absolute;
+      bottom: 3rem;
+      right: 1rem;
+      text-align: right;
+      line-height: 0.8rem;
+      font-size: 0.8rem;
+      a {
+        font-size: 0.8rem;
+      }
+    }
   }
 }
 
@@ -293,7 +455,7 @@
   background-position: center top;
 }
 #mobile_fourth {
-  background-image: url('./../images/color_mobile.png');
+  background-image: url('./../images/color_mobile.jpg');
   background-size: cover;
   background-position: center bottom;
 }

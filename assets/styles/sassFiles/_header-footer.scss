@@ -57,9 +57,11 @@
 		transform: translateX(-50%);
 		bottom: 5rem;
 	}
-
 	@media only screen and (max-width: 1024px) {
 		max-width: 900px;
+	}
+	@media only screen and (max-width: 770px) {
+		max-width: 700px;
 	}
 }
 
@@ -69,28 +71,30 @@ footer {
 		background-color: $text_color;
 		padding: 0.5rem 1rem;
 		border-radius: 10px;
-
 		p {
 			color: $white;
 			font-size: 1.25rem;
+		}
+		@media only screen and (max-width: 770px) {
+			margin: 0 1rem;
+			p {
+				font-size: 0.8rem;
+			}
 		}
 	}
 
 	.adress_container {
 		// padding: 1rem;
 		margin: 0 auto;
-
 		a,
 		span {
 			color: $text_color;
 			font-size: 1.25rem;
 			transition: all 0.25s ease-in-out;
 		}
-
 		a:hover {
 			color: $white;
 		}
-
 		svg {
 			width: auto;
 			height: 20px;
@@ -101,6 +105,14 @@ footer {
 				&:hover {
 					fill: $white;
 				}
+			}
+		}
+		@media only screen and (max-width: 770px) {
+			a, span {
+				font-size: 0.8rem;
+			}
+			svg {
+				height: 0.8rem;
 			}
 		}
 	}
