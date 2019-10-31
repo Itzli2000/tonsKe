@@ -52,6 +52,7 @@
 	}
 
 	&.sixth_section {
+		display: none !important;
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
@@ -78,7 +79,7 @@ footer {
 		@media only screen and (max-width: 770px) {
 			margin: 0 1rem;
 			p {
-				font-size: 0.8rem;
+				font-size: 0.7rem;
 			}
 		}
 	}
