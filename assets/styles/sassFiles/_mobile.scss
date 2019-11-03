@@ -8,70 +8,85 @@
   background: $primary !important;
 }
 
-.mobile {
-  .plus_btn {
-    position: fixed;
-    border-radius: 100%;
-    z-index: 999999;
-    width: 20px;
-    height: 20px;
-    background-color: $white;
-    top: 2rem;
-    right: 1.5rem;
-    transition: all 0.2s ease-in-out;
+.plus_btn {
+  position: fixed;
+  border-radius: 100%;
+  z-index: 999999;
+  width: 20px;
+  height: 20px;
+  background-color: $white;
+  top: 2rem;
+  right: 1.5rem;
+  transition: all 0.2s ease-in-out;
 
-    a {
-      font-weight: bold;
-      font-size: 1rem;
-      color: $full_black;
+  a {
+    font-weight: bold;
+    font-size: 1rem;
+    color: $full_black;
 
-      &:hover,
-      &:focus,
-      &:active {
-        color: $primary;
-      }
+    &:hover,
+    &:focus,
+    &:active {
+      color: $primary;
     }
   }
+}
 
-  .mobile_menu {
-    width: 150px;
-    height: auto;
-    position: fixed;
-    right: -400px;
-    top: 0;
-    z-index: 9999999;
-    margin-right: 2rem;
-    margin-top: 2rem;
-    background-color: $primary;
-    transition: all 0.25s ease-in-out;
+.mobile_menu {
+  width: 150px;
+  height: auto;
+  position: fixed;
+  right: -400px;
+  top: 0;
+  z-index: 9999999;
+  margin-right: 2rem;
+  margin-top: 2rem;
+  background-color: $primary;
+  transition: all 0.25s ease-in-out;
 
-    img {
-      width: 100%;
-    }
+  img {
+    width: 100%;
+  }
 
-    ul {
-      list-style: none;
-      line-height: 1rem;
-      padding: 0;
-      @include boxShadowMixin($offX: map-get($main_shadow, 'offX'),
-        $offY: map-get($main_shadow, 'offY'),
-        $blur: map-get($main_shadow, 'blur'),
-        $spread: map-get($main_shadow, 'spread'),
-        $color: map-get($main_shadow, 'color'),
-        $alpha: map-get($main_shadow, 'alpha'));
+  ul {
+    list-style: none;
+    line-height: 1rem;
+    padding: 0;
+    @include boxShadowMixin(
+      $offX: map-get($main_shadow, "offX"),
+      $offY: map-get($main_shadow, "offY"),
+      $blur: map-get($main_shadow, "blur"),
+      $spread: map-get($main_shadow, "spread"),
+      $color: map-get($main_shadow, "color"),
+      $alpha: map-get($main_shadow, "alpha")
+    );
 
-      li {
-        padding: 0.5rem;
-        padding-left: 3.5rem;
-        position: relative;
+    li {
+      padding: 0.5rem;
+      padding-left: 3.5rem;
+      position: relative;
 
-        a {
-          font-size: 1rem;
-        }
+      a {
+        font-size: 1rem;
+      }
+
+      &:after {
+        content: "+";
+        font-size: 1rem;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        left: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:first-of-type {
+        border-bottom: 1px solid;
 
         &:after {
-          content: '+';
-          font-size: 1rem;
+          content: "";
           position: absolute;
           width: 10px;
           height: 10px;
@@ -79,213 +94,297 @@
           left: 1rem;
           top: 50%;
           transform: translateY(-50%);
+          border: 1px solid;
         }
+      }
 
-        &:first-of-type {
-          border-bottom: 1px solid;
+      &:last-of-type {
+        border-bottom: 1px solid;
 
-          &:after {
-            content: '';
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            border-radius: 100%;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            border: 1px solid;
-          }
-        }
-
-        &:last-of-type {
-          border-bottom: 1px solid;
-
-          &:after {
-            content: '';
-            background-image: url('./../images/mail.svg');
-            background-size: 100%;
-            background-position: center;
-            background-repeat: no-repeat;
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            border-radius: 0;
-            left: 0.6rem;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
-
-        &:before {
+        &:after {
+          content: "";
+          background-image: url("./../images/mail.svg");
+          background-size: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
           position: absolute;
-          content: '';
-          width: 2.5rem;
-          height: 100%;
-          left: 0;
-          top: 0;
-          background-color: rgba($white, 0.5);
-        }
-
-        &:hover {
-          background-color: rgba($full_black, 0.5);
+          width: 20px;
+          height: 20px;
+          border-radius: 0;
+          left: 0.6rem;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
-    }
 
-    .social_container {
-      padding: 0.5rem;
-
-      svg {
-        width: 100%;
-        height: auto;
-      }
-
-      img {
-        width: auto;
+      &:before {
+        position: absolute;
+        content: "";
+        width: 2.5rem;
         height: 100%;
-        max-height: 23.5px;
+        left: 0;
+        top: 0;
+        background-color: rgba($white, 0.5);
       }
-    }
 
-    &.active {
-      right: 0;
+      &:hover {
+        background-color: rgba($full_black, 0.5);
+      }
     }
   }
 
-  .mobile_container {
-    min-height: 100vh;
-    position: relative;
+  .social_container {
+    padding: 0.5rem;
 
-    .owl-carousel {
-      position: relative;
-      min-height: 100vh;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    img {
+      width: auto;
       height: 100%;
+      max-height: 23.5px;
+    }
+  }
 
-      .owl-item {
-        .inner_view {
-          min-height: 100vh;
-          position: relative;
-          background-position: center;
-          background-size: cover;
+  &.active {
+    right: 0;
+  }
+}
+
+.mobile_container {
+  min-height: 100vh;
+  position: relative;
+
+  .owl-carousel {
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+
+    .owl-item {
+      .inner_view {
+        min-height: 100vh;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+
+        .mobile_slider_badge {
+          position: absolute;
+          text-align: center;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 90px;
+          height: 90px;
+          background-color: #fff;
+          border-radius: 100%;
+          font-size: 1.3rem;
+          line-height: 1.3rem;
+
+          &.bottom {
+            bottom: 2.5rem;
+          }
+        }
+
+        &.slide_1 {
+          background-image: url("./../images/mobile/car1/slide_1.jpg");
+        }
+
+        &.slide_2 {
+          background-image: url("./../images/mobile/car1/slide_2.jpg");
 
           .mobile_slider_badge {
-            position: absolute;
-            text-align: center;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 90px;
-            height: 90px;
-            background-color: #fff;
-            border-radius: 100%;
-            font-size: 1.3rem;
-            line-height: 1.3rem;
-
-            &.bottom {
-              bottom: 2.5rem;
-            }
-          }
-
-          &.slide_1 {
-            background-image: url('./../images/mobile/car1/slide_1.jpg');
-          }
-
-          &.slide_2 {
-            background-image: url('./../images/mobile/car1/slide_2.jpg');
-
-            .mobile_slider_badge {
-              background-color: $primary;
-            }
-          }
-
-          &.slide_3 {
-            background-image: url('./../images/mobile/car1/slide_3.jpg');
-          }
-
-          &.slide_4 {
-            background-image: url('./../images/mobile/car1/slide_4.jpg');
-
-            .mobile_slider_badge {
-              background-color: $full_black;
-              color: $white;
-            }
-          }
-        }
-      }
-
-      .owl-nav {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-bottom: 1.5rem;
-
-        .owl-prev {
-          line-height: 1.5rem;
-          float: left;
-          margin-left: 1rem;
-          transition: all 0.2s ease-in-out;
-
-          &:hover,
-          &:focus,
-          &:active {
-            background-color: transparent;
-            color: $white;
+            background-color: $primary;
           }
         }
 
-        .owl-next {
-          line-height: 1.5rem;
-          float: right;
-          margin-right: 1rem;
-          transition: all 0.2s ease-in-out;
+        &.slide_3 {
+          background-image: url("./../images/mobile/car1/slide_3.jpg");
+        }
 
-          &:hover,
-          &:focus,
-          &:active {
-            background-color: transparent;
+        &.slide_4 {
+          background-image: url("./../images/mobile/car1/slide_4.jpg");
+
+          .mobile_slider_badge {
+            background-color: $full_black;
             color: $white;
           }
         }
       }
+    }
 
-      .owl-dots {
+    .owl-nav {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 1.5rem;
+
+      .owl-prev {
         line-height: 1.5rem;
-        margin-bottom: 1.5rem;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
+        float: left;
+        margin-left: 1rem;
+        transition: all 0.2s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+          color: $white;
+        }
+      }
+
+      .owl-next {
+        line-height: 1.5rem;
+        float: right;
+        margin-right: 1rem;
+        transition: all 0.2s ease-in-out;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-color: transparent;
+          color: $white;
+        }
       }
     }
 
-    .section_footer {
-      margin: 2rem auto;
-
-      p,
-      a {
-        font-size: 1rem;
-      }
-    }
-
-    .mobile_section_title {
+    .owl-dots {
+      line-height: 1.5rem;
+      margin-bottom: 1.5rem;
       position: absolute;
-      top: 1.5rem;
-      left: 1rem;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .section_footer {
+    margin: 2rem auto;
+
+    p,
+    a {
       font-size: 1rem;
-      color: $link_color;
+    }
+  }
+
+  .mobile_section_title {
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    font-size: 1rem;
+    color: $link_color;
+  }
+
+  .mobile_section_content {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 95%;
+    transform: translateX(-50%);
+    text-align: right;
+
+    img {
+      max-width: 170px;
     }
 
-    .mobile_section_content {
+    p {
+      font-size: 1rem;
+
+      span {
+        font-size: 1.1rem;
+      }
+    }
+
+    &.top_align {
+      bottom: unset;
+      top: 3.5rem;
+      text-align: left;
+    }
+  }
+
+  .mobile_full_header {
+    background-color: $white;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .information_card {
+    padding: 1rem;
+    margin: 0 auto;
+
+    img {
+      max-width: 150px;
+      display: block;
+      margin-right: auto;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      word-break: break-word;
+      text-align: left;
+      font-size: 2.8rem;
+      line-height: 2.8rem;
+    }
+
+    @media only screen and (max-width: 320px) {
+      max-width: 90%;
+      margin: auto;
+
+      p {
+        font-size: 2.3rem;
+        line-height: 2.5rem;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .advantages_card {
+    text-align: center;
+
+    .adventage {
+      width: 70px;
+      height: 70px;
+      border-radius: 100px;
+      display: inline-block;
+      background-color: $text_color;
+      margin-left: 15%;
+      margin-bottom: 1rem;
+
+      img {
+        width: 50%;
+        height: auto;
+      }
+
+      @media only screen and (max-width: 350px) {
+        margin-left: 0;
+      }
+    }
+
+    p {
+      min-width: 200px;
+      font-size: 1rem;
+      display: inline-block;
+    }
+  }
+
+  .owl-concepto {
+    .mobile_section_title {
+      top: 0.5rem;
+    }
+    .mobile_section_content_concept {
       position: absolute;
-      bottom: 1rem;
+      bottom: 5rem;
       left: 50%;
       width: 95%;
       transform: translateX(-50%);
       text-align: right;
 
       img {
-        max-width: 170px;
+        max-width: 130px;
+        margin-left: auto;
+        margin-bottom: 2rem;
       }
 
       p {
@@ -303,251 +402,158 @@
       }
     }
 
-    .mobile_full_header {
-      background-color: $white;
-      padding: 2rem 0;
-      margin-bottom: 2rem;
-    }
-
-    .information_card {
-      padding: 1rem;
-      margin: 0 auto;
-
-      img {
-        max-width: 150px;
-        display: block;
-        margin-right: auto;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        word-break: break-word;
-        text-align: left;
-        font-size: 2.8rem;
-        line-height: 2.8rem;
-      }
-
-      @media only screen and (max-width: 320px) {
-        max-width: 90%;
-        margin: auto;
-
-        p {
-          font-size: 2.3rem;
-          line-height: 2.5rem;
-          margin-bottom: 2rem;
-        }
-      }
-    }
-
-    .advantages_card {
+    .mobile_slider_badge {
+      position: absolute;
       text-align: center;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90px;
+      height: 90px;
+      background-color: #fff;
+      border-radius: 100%;
+      font-size: 1.3rem;
+      line-height: 1.3rem;
 
-      .adventage {
+      &.top {
+        top: 20%;
+      }
+
+      &.bottom {
+        bottom: 15%;
+      }
+    }
+
+    .inner_view {
+      background-size: contain;
+      background-position: center;
+
+      &.first {
+        background-image: url("./../images/mobile/car2/slide_1.jpg");
+      }
+
+      &.second {
+        background-image: url("./../images/mobile/car2/slide_2.jpg");
+      }
+
+      &.third {
+        background-image: url("./../images/mobile/car2/slide_3.jpg");
+      }
+
+      &.fourth {
+        background-image: url("./../images/mobile/car2/slide_4.jpg");
+      }
+
+      &.fifth {
+        background-image: url("./../images/mobile/car2/slide_5.jpg");
+      }
+
+      &.sixth {
+        background-image: url("./../images/mobile/car2/slide_6.jpg");
+      }
+
+      &.seventh {
+        background-image: url("./../images/mobile/car2/slide_7.jpg");
+      }
+    }
+  }
+
+  img.contact_title_image {
+    max-width: 200px;
+    display: block;
+    margin: auto;
+  }
+
+  form {
+    margin: auto;
+    max-width: 1090px;
+    position: relative;
+    @include boxShadowMixin(
+      $offX: map-get($main_shadow, "offX"),
+      $offY: map-get($main_shadow, "offY"),
+      $blur: map-get($main_shadow, "blur"),
+      $spread: map-get($main_shadow, "spread"),
+      $color: map-get($main_shadow, "color"),
+      $alpha: map-get($main_shadow, "alpha")
+    );
+    padding: 2rem;
+
+    .form-group {
+      position: relative;
+
+      label {
+        display: inline-block;
         width: 70px;
-        height: 70px;
-        border-radius: 100px;
-        display: inline-block;
-        background-color: $text_color;
-        margin-left: 15%;
-        margin-bottom: 1rem;
-
-        img {
-          width: 50%;
-          height: auto;
-        }
-
-        @media only screen and (max-width: 350px) {
-          margin-left: 0;
-        }
-      }
-
-      p {
-        min-width: 200px;
         font-size: 1rem;
-        display: inline-block;
-      }
-    }
-
-    .owl-concepto {
-      .mobile_section_title {
-        top: 0.5rem;
-      }
-      .mobile_section_content_concept {
-        position: absolute;
-        bottom: 5rem;
-        left: 50%;
-        width: 95%;
-        transform: translateX(-50%);
         text-align: right;
-
-        img {
-          max-width: 130px;
-          margin-left: auto;
-          margin-bottom: 2rem;
-        }
-
-        p {
-          font-size: 1rem;
-
-          span {
-            font-size: 1.1rem;
-          }
-        }
-
-        &.top_align {
-          bottom: unset;
-          top: 3.5rem;
-          text-align: left;
-        }
       }
 
-      .mobile_slider_badge {
-        position: absolute;
-        text-align: center;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 90px;
-        height: 90px;
-        background-color: #fff;
-        border-radius: 100%;
-        font-size: 1.3rem;
-        line-height: 1.3rem;
-
-        &.top {
-          top: 20%;
-        }
-
-        &.bottom {
-          bottom: 15%;
-        }
-      }
-
-      .inner_view {
-        background-size: contain;
-        background-position: center;
-
-        &.first {
-          background-image: url('./../images/mobile/car2/slide_1.jpg');
-        }
-
-        &.second {
-          background-image: url('./../images/mobile/car2/slide_2.jpg');
-        }
-
-        &.third {
-          background-image: url('./../images/mobile/car2/slide_3.jpg');
-        }
-
-        &.fourth {
-          background-image: url('./../images/mobile/car2/slide_4.jpg');
-        }
-
-        &.fifth {
-          background-image: url('./../images/mobile/car2/slide_5.jpg');
-        }
-
-        &.sixth {
-          background-image: url('./../images/mobile/car2/slide_6.jpg');
-        }
-
-        &.seventh {
-          background-image: url('./../images/mobile/car2/slide_7.jpg');
-        }
-      }
-    }
-
-    img.contact_title_image {
-      max-width: 200px;
-      display: block;
-      margin: auto;
-    }
-
-    form {
-      margin: auto;
-      max-width: 1090px;
-      @include boxShadowMixin($offX: map-get($main_shadow, 'offX'),
-        $offY: map-get($main_shadow, 'offY'),
-        $blur: map-get($main_shadow, 'blur'),
-        $spread: map-get($main_shadow, 'spread'),
-        $color: map-get($main_shadow, 'color'),
-        $alpha: map-get($main_shadow, 'alpha'));
-      padding: 2rem;
-
-      .form-group {
-        position: relative;
-
-        label {
-          display: inline-block;
-          width: 70px;
-          font-size: 1rem;
-          text-align: right;
-        }
-
-        input {
-          display: inline-block;
-          width: auto;
-          background-color: transparent;
-          border: none;
-          border-bottom: 1px solid rgba($full_black, 0.15);
-          border-radius: 0;
-        }
-      }
-
-      button.btn {
-        font-family: 'AvenirHeavy';
-        margin: auto;
-        margin-top: 3rem;
-        background-color: rgba($white, 0.5);
-        display: block;
-        font-size: 1.5rem;
+      input {
+        display: inline-block;
+        width: auto;
+        background-color: transparent;
         border: none;
+        border-bottom: 1px solid rgba($full_black, 0.15);
         border-radius: 0;
-        @include boxShadowMixin($offX: map-get($main_shadow, 'offX'),
-          $offY: map-get($main_shadow, 'offY'),
-          $blur: map-get($main_shadow, 'blur'),
-          $spread: map-get($main_shadow, 'spread'),
-          $color: map-get($main_shadow, 'color'),
-          $alpha: map-get($main_shadow, 'alpha'));
       }
     }
 
+    button.btn {
+      font-family: "AvenirHeavy";
+      margin: auto;
+      margin-top: 3rem;
+      background-color: rgba($white, 0.5);
+      display: block;
+      font-size: 1.5rem;
+      border: none;
+      border-radius: 0;
+      @include boxShadowMixin(
+        $offX: map-get($main_shadow, "offX"),
+        $offY: map-get($main_shadow, "offY"),
+        $blur: map-get($main_shadow, "blur"),
+        $spread: map-get($main_shadow, "spread"),
+        $color: map-get($main_shadow, "color"),
+        $alpha: map-get($main_shadow, "alpha")
+      );
+    }
     .privacy {
       width: 100%;
       position: absolute;
-      bottom: 0;
-      right: 1rem;
+      bottom: -3rem;
+      right: 0;
       text-align: right;
       line-height: 0.8rem;
       font-size: 0.8rem;
-
       a {
         font-size: 0.8rem;
       }
+    }
+    @media only screen and (max-width: 330px) {
+      padding: 0.5rem;
     }
   }
 }
 
 #mobile_third {
-  background-image: url('./../images/kehacemos_mobile.png');
+  background-image: url("./../images/kehacemos_mobile.png");
   background-size: cover;
   background-position: center top;
 }
 
 #mobile_fourth {
-  background-image: url('./../images/color_mobile.jpg');
+  background-image: url("./../images/color_mobile.jpg");
   background-size: cover;
   background-position: center bottom;
 }
 
 #mobile_fifth {
-  background-image: url('./../images/ventajas_mobile.png');
+  background-image: url("./../images/ventajas_mobile.png");
   background-size: cover;
   background-position: center top;
 }
 
 @media only screen and (max-width: 767px) {
   footer {
-    background-image: url('./../images/mobile/home/Bg_footer.jpg');
+    background-image: url("./../images/mobile/home/Bg_footer.jpg");
     background-size: cover;
     background-position: center bottom;
   }

@@ -1,128 +1,150 @@
 .header_section {
-	position: fixed;
-	top: 0;
-	left: 0;
-	background-color: $primary;
-	width: 100%;
-	max-width: 100vw;
-	z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: $primary;
+  width: 100%;
+  max-width: 100vw;
+  z-index: 999;
 
-	img.logo {
-		width: 100%;
-		max-width: 183px;
-		margin: 2rem 0;
-	}
+  img.logo {
+    width: 100%;
+    max-width: 183px;
+    margin: 2rem 0;
+  }
 
-	.description {
-		font-size: $link_fz;
+  .description {
+    font-size: $link_fz;
 
-		svg.mail {
-			margin-left: 1rem;
-			max-width: 28px;
-		}
-	}
+    svg.mail {
+      margin-left: 1rem;
+      max-width: 28px;
+    }
+  }
 }
 
 .footer_section {
-	margin-top: 3.125rem;
-	width: 100%;
-	max-width: 1300px;
-	margin: 0 auto;
-	margin-bottom: 1rem;
+  margin-top: 3.125rem;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 
-	svg {
-		width: 31px;
-		height: auto;
-		margin: 0.5rem 0;
-	}
+  svg {
+    width: 31px;
+    height: auto;
+    margin: 0.5rem 0;
+  }
 
-	&.fourth_section {
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: 2rem;
-		@media only screen and (max-width: 1024px) {
-			display: none !important;
-		}
-	}
+  &.fourth_section {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 2rem;
+    @media only screen and (max-width: 1024px) {
+      display: none !important;
+    }
+  }
 
-	&.fifth_section {
-		margin-top: -7rem;
-		margin-bottom: 2rem;
-	}
+  &.fifth_section {
+    margin-top: -7rem;
+    margin-bottom: 2rem;
+  }
 
-	&.sixth_section {
-		display: none !important;
-		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: 5rem;
-	}
-	@media only screen and (max-width: 1024px) {
-		max-width: 900px;
-	}
-	@media only screen and (max-width: 770px) {
-		max-width: 700px;
-	}
+  &.sixth_section {
+    display: none !important;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5rem;
+  }
+  @media only screen and (max-width: 1024px) {
+    max-width: 900px;
+  }
+  @media only screen and (max-width: 770px) {
+    max-width: 700px;
+  }
 }
 
 footer {
-	.footer_badge {
-		display: inline-block;
-		background-color: $text_color;
-		padding: 0.5rem 1rem;
-		border-radius: 10px;
-		p {
-			color: $white;
-			font-size: 1.25rem;
-		}
-		@media only screen and (max-width: 770px) {
-			margin: 0 1rem;
-			p {
-				font-size: 0.7rem;
-			}
-		}
+  padding-bottom: 3rem;
+  margin-top: 1rem;
+  .footer_badge {
+    display: inline-block;
+    background-color: $text_color;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    p {
+      color: $white;
+      font-size: 1.25rem;
+    }
+  }
+
+  .adress_container {
+    // padding: 1rem;
+    margin: 0 auto;
+    a,
+    span {
+      color: $text_color;
+      font-size: 1.25rem;
+      transition: all 0.25s ease-in-out;
+    }
+    a:hover {
+      color: $white;
+    }
+    svg {
+      width: auto;
+      height: 20px;
+
+      path {
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          fill: $white;
+        }
+      }
+    }
+  }
+
+  .footer_logo {
+    p {
+      font-family: "AvenirBook";
+      font-size: 1.048rem;
+      line-height: 1rem;
+    }
+  }
+
+  @media only screen and (max-width: 770px) {
+	padding-bottom: 0;
+	margin-top: 3rem;
+    .footer_badge {
+      margin: 0 1rem;
+      p {
+        font-size: 0.7rem;
+      }
+    }
+    .adress_container {
+      margin: 0.5rem 0 !important;
+      a,
+      span {
+        font-size: 0.8rem;
+      }
+      svg {
+        height: 0.6rem;
+      }
 	}
-
-	.adress_container {
-		// padding: 1rem;
-		margin: 0 auto;
-		a,
-		span {
-			color: $text_color;
-			font-size: 1.25rem;
-			transition: all 0.25s ease-in-out;
-		}
-		a:hover {
-			color: $white;
-		}
-		svg {
-			width: auto;
-			height: 20px;
-
-			path {
-				transition: all 0.25s ease-in-out;
-
-				&:hover {
-					fill: $white;
-				}
-			}
-		}
-		@media only screen and (max-width: 770px) {
-			a, span {
-				font-size: 0.8rem;
-			}
-			svg {
-				height: 0.8rem;
-			}
-		}
-	}
-
 	.footer_logo {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 0.5rem 0;
+		img {
+			max-height: 30px;
+		}
 		p {
-			font-family: 'AvenirBook';
-			font-size: 1.048rem;
-			line-height: 1rem;
+			font-size: 0.5rem;
 		}
 	}
+  }
 }

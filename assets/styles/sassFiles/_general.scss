@@ -136,11 +136,16 @@ button {
 }
 
 .privacy_content {
+	padding-top: 9rem;
+	padding-bottom: 5rem;
 	p {
 		font-size: 1.3rem;
 
 		span.title {
 			font-size: 1.5rem;
 		}
+	}
+	@media only screen and (max-width: 767px) {
+		padding-top: 2rem;
 	}
 }
