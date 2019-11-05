@@ -33,12 +33,12 @@
 							<img class="img-fluid logo" src="./assets/images/logo.png" alt="tonske">
 						</a>
 					</div>
-					<div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
+					<div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-start">
 						<div class="description d-flex flex-row justify-content-center align-items-center">
-							<a href="#section_two">forma</a>&nbsp;+&nbsp;
-							<a href="#section_three">color</a>&nbsp;+&nbsp;
-							<a href="#conceptoScroll">concepto</a>
-							<a href="#contact_section">
+							<a onclick="scrollToElement('section_two')">forma</a>&nbsp;+&nbsp;
+							<a onclick="scrollToElement('section_three')">color</a>&nbsp;+&nbsp;
+							<a onclick="scrollToElement('conceptoScroll')">concepto</a>
+							<a onclick="scrollToElement('contact_section')">
 								<svg class="mail" xmlns="http://www.w3.org/2000/svg" width="27.97" height="18.031"
 									viewBox="0 0 27.97 18.031">
 									<defs>
@@ -172,7 +172,7 @@
 								Su navegador no soporta SVG
 							</object> -->
 						</div>
-						<div class="square_text col-12 d-flex justify-content-start align-items-center">
+						<div class="square_text col-12 d-flex justify-content-center align-items-center">
 							<p>forma</p>
 						</div>
 					</div>
@@ -233,7 +233,7 @@
 									color</span> a las ideas del cliente, creando un mensaje <span>adecuado, efectivo y
 									poderoso.</span></p>
 						</div>
-						<div class="square_text col-12 d-flex justify-content-end align-items-center">
+						<div class="square_text col-12 d-flex justify-content-center align-items-center">
 							<p>color</p>
 						</div>
 					</div>
@@ -331,7 +331,7 @@
 					</div>
 
 					<!-- Footer section -->
-					<div id="conceptoScroll"
+					<div
 						class="fourth_section footer_section d-flex flex-column justify-content-start align-items-start">
 						<a href="https://www.instagram.com/tonskecreativo/" target="blank"
 							class="d-flex flex-column justify-content-center align-items-center">
@@ -369,17 +369,13 @@
 				</div>
 
 				<!-- Header fifth section -->
-				<div class="mt-5 d-flex flex-column justify-content-between">
-					<!-- <div id="conceptoScroll" class="section_container d-flex flex-column justify-content-center"> -->
+				<div id="conceptoScroll" class="mt-5 d-flex flex-column justify-content-between">
 
 					<!-- Fifth section -->
 					<div class="d-flex flex-row justify-content-center align-items-center fifth_section_container">
 						<div class="col-12 col-md-4 text-right">
 							<img style="max-width: 250px" class="img-fluid title_image"
 								src="./assets/images/titulos/koncepto.png">
-							<!-- <object class="section_header" type="image/svg+xml" data="./assets/images/concepto_titulo.svg">
-									Su navegador no soporta SVG
-								</object> -->
 						</div>
 						<div class="col-12 col-md-8">
 							<p>Todos nuestros conceptos se realizan con <span>profesionalismo, dedicación y
@@ -387,7 +383,7 @@
 								presentada con un toque de <span>magia y estética</span> sin perder el enfoque del
 								mensaje.</p>
 						</div>
-						<div class="square_text col-12 d-flex justify-content-start align-items-center">
+						<div class="square_text col-12 d-flex justify-content-center align-items-center">
 							<p>experiencia <br>conceptual</p>
 						</div>
 					</div>
@@ -458,26 +454,6 @@
 			<div class="inner_page">
 				<div id="contact_section" class="contact_form">
 					<div class="section_container d-flex flex-column justify-content-around">
-						<!-- <div class="header_section row">
-							<div class="col-12 col-md-4"></div>
-							<div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
-								<object class="logo" type="image/svg+xml" data="./assets/images/logo.svg">
-									Su navegador no soporta SVG
-								</object>
-							</div>
-							<div class="col-12 col-md-4 d-flex flex-column justify-content-center align-items-center">
-								<a href="#contact_section" class="description d-flex flex-row justify-content-center align-items-center">
-									forma + color + concepto
-									<svg class="mail" xmlns="http://www.w3.org/2000/svg" width="27.97" height="18.031" viewBox="0 0 27.97 18.031">
-										<defs>
-											<style>.cls-1 {fill-rule: evenodd;}</style>
-										</defs>
-										<path id="MAIL" class="cls-1" d="M1578.54,101.513a2.093,2.093,0,0,1,.7-0.125h23.92a2.093,2.093,0,0,1,.7.125l-10.71,9.543a2.973,2.973,0,0,1-3.9,0Zm26.35,16.958a1.868,1.868,0,0,0,.29-0.989V103.3a1.775,1.775,0,0,0-.15-0.727l-10.03,8.93ZM1594.1,112.3a4.65,4.65,0,0,1-5.8,0l-9.85,6.943a2.1,2.1,0,0,0,.79.153h23.92a2.1,2.1,0,0,0,.79-0.153Zm-16.73-9.725a1.775,1.775,0,0,0-.15.727v14.178a1.868,1.868,0,0,0,.29.989l9.89-6.964Z" transform="translate(-1577.22 -101.375)"/>
-									</svg>
-
-								</a>
-							</div>
-						</div> -->
 
 						<!-- sixth section -->
 						<div class="d-flex flex-row justify-content-center align-items-center sixth_section_container">
@@ -844,7 +820,7 @@
 			</a>
 		</div>
 		<div class="footer_logo">
-			<img src="./assets/images/logo_footer.png" alt="TonsKe logo">
+			<img src="./assets/images/logo.png" alt="TonsKe logo">
 			<p class="text-center">dr. 2019</p>
 		</div>
 	</footer>

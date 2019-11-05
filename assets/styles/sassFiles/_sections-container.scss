@@ -15,10 +15,6 @@
 		width: 350px;
 		right: calc(-350px - 5rem);
 		background-color: $white;
-
-		p {
-			padding-left: 2rem;
-		}
 	}
 
 	@media only screen and (max-width: 1440px) {
@@ -32,7 +28,8 @@
 		}
 
 		.square_text {
-			// right: calc(-250px - 4rem);
+			width: 250px;
+			right: calc(-250px - 5rem);
 		}
 	}
 
@@ -65,10 +62,6 @@
 		top: -50px;
 		left: calc(-350px - 5rem);
 		background-color: $white;
-
-		p {
-			padding-right: 2rem;
-		}
 	}
 
 	@media only screen and (max-width: 1440px) {
@@ -80,7 +73,8 @@
 		}
 
 		.square_text {
-			right: calc(-250px - 4rem);
+			width: 250px;
+			left: calc(-250px - 4rem);
 		}
 	}
 
@@ -184,10 +178,6 @@
 		width: 350px;
 		right: calc(-350px - 5rem);
 		background-color: $white;
-
-		p {
-			padding-left: 2rem;
-		}
 	}
 
 	@media only screen and (max-width: 1440px) {
@@ -201,7 +191,8 @@
 		}
 
 		.square_text {
-			// right: calc(-250px - 4rem);
+			width: 250px;
+			right: calc(-250px - 5rem);
 		}
 	}
 }
@@ -335,8 +326,8 @@
 
 	.privacy {
 		position: absolute;
-		bottom: 1.5rem;
-		right: -160px;
+		bottom: -4.5rem;
+		right: 0.5rem;
 		line-height: 0.8rem;
 		@media only screen and (max-width: 1024px) {
 			position: relative;
