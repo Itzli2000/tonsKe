@@ -33,13 +33,14 @@
 }
 
 .mobile_menu {
-  width: 150px;
+  width: 100%;
+  max-width: 200px;
   height: auto;
   position: fixed;
   right: -400px;
   top: 0;
   z-index: 9999999;
-  margin-right: 2rem;
+  margin-right: 0;
   margin-top: 2rem;
   background-color: $primary;
   transition: all 0.25s ease-in-out;
@@ -52,6 +53,7 @@
     list-style: none;
     line-height: 1rem;
     padding: 0;
+    margin: 0;
     @include boxShadowMixin(
       $offX: map-get($main_shadow, "offX"),
       $offY: map-get($main_shadow, "offY"),
@@ -62,7 +64,9 @@
     );
 
     li {
-      padding: 0.5rem;
+      display: flex;
+      flex-direction: row;
+      padding: 1rem;
       padding-left: 3.5rem;
       position: relative;
 
@@ -74,10 +78,10 @@
         content: "+";
         font-size: 1rem;
         position: absolute;
-        width: 10px;
-        height: 10px;
+        width: 1rem;
+        height: 1rem;
         border-radius: 100%;
-        left: 1rem;
+        left: 0.8rem;
         top: 50%;
         transform: translateY(-50%);
       }
@@ -86,7 +90,7 @@
         border-bottom: 1px solid;
 
         &:after {
-          content: "";
+          content: "x";
           position: absolute;
           width: 10px;
           height: 10px;
@@ -94,7 +98,7 @@
           left: 1rem;
           top: 50%;
           transform: translateY(-50%);
-          border: 1px solid;
+          // border: 1px solid;
         }
       }
 
@@ -137,8 +141,8 @@
     padding: 0.5rem;
 
     svg {
-      width: 100%;
-      height: auto;
+      width: auto;
+      height: 23.5px;
     }
 
     img {
@@ -273,7 +277,7 @@
     position: absolute;
     top: 1.5rem;
     left: 1rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: $link_color;
   }
 
@@ -302,17 +306,30 @@
       top: 3.5rem;
       text-align: left;
     }
+    @media only screen and (max-width: 320px) {
+      width: 90%;
+      img {
+        max-width: 125px;
+      }
+      p {
+        font-size: 0.7rem;
+        span {
+          font-size: 0.75rem;
+        }
+      }
+    }
   }
 
   .mobile_full_header {
     background-color: $white;
     padding: 2rem 0;
     margin-bottom: 2rem;
+    margin-top: 2rem;
   }
 
   .information_card {
     padding: 1rem;
-    margin: 0 auto;
+    margin: 0 0.8rem;
 
     img {
       max-width: 150px;
@@ -324,8 +341,8 @@
     p {
       word-break: break-word;
       text-align: left;
-      font-size: 2.8rem;
-      line-height: 2.8rem;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
     }
 
     @media only screen and (max-width: 320px) {
@@ -333,8 +350,8 @@
       margin: auto;
 
       p {
-        font-size: 2.3rem;
-        line-height: 2.5rem;
+        font-size: 2rem;
+        line-height: 2.1rem;
         margin-bottom: 2rem;
       }
     }
@@ -375,23 +392,24 @@
     }
     .mobile_section_content_concept {
       position: absolute;
-      bottom: 5rem;
+      bottom: 6.5rem;
       left: 50%;
       width: 95%;
       transform: translateX(-50%);
       text-align: right;
 
       img {
-        max-width: 130px;
+        max-width: 100px;
         margin-left: auto;
         margin-bottom: 2rem;
+        margin-right: 20%;
       }
 
       p {
-        font-size: 1rem;
+        font-size: 0.7rem;
 
         span {
-          font-size: 1.1rem;
+          font-size: 0.75rem;
         }
       }
 
@@ -458,14 +476,14 @@
   }
 
   img.contact_title_image {
-    max-width: 200px;
+    max-width: 90%;
     display: block;
     margin: auto;
   }
 
   form {
     margin: auto;
-    max-width: 1090px;
+    max-width: 95%;
     position: relative;
     @include boxShadowMixin(
       $offX: map-get($main_shadow, "offX"),
@@ -479,12 +497,15 @@
 
     .form-group {
       position: relative;
+      line-height: 1;
+      margin: 0;
 
       label {
         display: inline-block;
         width: 70px;
         font-size: 1rem;
         text-align: right;
+        margin: 0;
       }
 
       input {
@@ -521,10 +542,10 @@
       bottom: -3rem;
       right: 0;
       text-align: right;
-      line-height: 0.8rem;
-      font-size: 0.8rem;
+      line-height: 0.7rem;
+      font-size: 0.7rem;
       a {
-        font-size: 0.8rem;
+        font-size: 0.7rem;
       }
     }
     @media only screen and (max-width: 330px) {
@@ -537,18 +558,21 @@
   background-image: url("./../images/kehacemos_mobile.png");
   background-size: cover;
   background-position: center top;
+  background-repeat: no-repeat;
 }
 
 #mobile_fourth {
   background-image: url("./../images/color_mobile.jpg");
-  background-size: cover;
+  background-size: contain;
   background-position: center bottom;
+  background-repeat: no-repeat;
 }
 
 #mobile_fifth {
   background-image: url("./../images/ventajas_mobile.png");
-  background-size: cover;
+  background-size: contain;
   background-position: center top;
+  background-repeat: no-repeat;
 }
 
 @media only screen and (max-width: 767px) {

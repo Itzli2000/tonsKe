@@ -8,6 +8,7 @@
 
 html {
 	scroll-behavior: smooth;
+
 	@media only screen and (max-width: 1024px) {
 		width: 100vw;
 		overflow-x: hidden;
@@ -22,9 +23,11 @@ body {
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
+
 	@media only screen and (max-width: 1024px) {
 		width: 100vw;
 		overflow-x: hidden;
+		background-position: center 25%;
 	}
 }
 
@@ -74,6 +77,7 @@ p {
 	color: $text_color;
 	margin: 0;
 	font-weight: normal;
+
 	span {
 		font-family: 'AvenirHeavy';
 	}
@@ -133,11 +137,18 @@ button {
 			}
 		}
 	}
+
+	@media only screen and (max-width: 1024px) {
+		.section_container {
+			padding-top: 0 !important;
+		}
+	}
 }
 
 .privacy_content {
 	padding-top: 9rem;
 	padding-bottom: 5rem;
+
 	p {
 		font-size: 1.3rem;
 
@@ -145,7 +156,17 @@ button {
 			font-size: 1.5rem;
 		}
 	}
+
+	@media only screen and (max-width: 1024px) {
+		p {
+			font-size: 1.2rem;
+		}
+	}
+
 	@media only screen and (max-width: 767px) {
 		padding-top: 2rem;
+		p {
+			font-size: 1rem;
+		}
 	}
 }
