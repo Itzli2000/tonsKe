@@ -141,6 +141,11 @@
 		.advantages_card {
 			padding: 2rem 1.5rem;
 			max-width: 800px;
+			margin-top: 2rem;
+			.advantages_card {
+				padding: 4rem 2.5rem;
+				max-width: 900px;
+			}
 		}
 	}
 	@media only screen and (max-width: 770px) {

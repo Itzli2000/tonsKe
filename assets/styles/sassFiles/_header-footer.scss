@@ -25,6 +25,18 @@
       max-width: 28px;
     }
   }
+
+  @media only screen and (min-width: 770px) {
+    .tablet_header {
+      max-width: 33.33%;
+    }
+  }
+  @media only screen and (max-width: 770px) {
+    .tablet_header {
+      align-items: flex-start !important;
+      padding-left: 3rem;
+    }
+  }
 }
 
 .footer_section {
@@ -46,6 +58,7 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 2rem;
+
     @media only screen and (max-width: 1024px) {
       display: none !important;
     }
@@ -64,14 +77,17 @@
     // transform: translateX(-50%);
     // bottom: 0;
   }
+
   @media only screen and (max-width: 1440px) {
     max-width: 1100px;
   }
+
   @media only screen and (max-width: 1024px) {
     max-width: 900px;
     margin-top: -9rem !important;
     margin-bottom: 10rem;
   }
+
   @media only screen and (max-width: 770px) {
     max-width: 700px;
     margin-bottom: 0;
@@ -81,11 +97,13 @@
 footer {
   padding-bottom: 3rem;
   margin-top: 1rem;
+
   .footer_badge {
     display: inline-block;
     background-color: $text_color;
     padding: 0.5rem 1rem;
     border-radius: 10px;
+
     p {
       color: $white;
       font-size: 1.25rem;
@@ -96,15 +114,18 @@ footer {
   .adress_container {
     // padding: 1rem;
     margin: 0 auto;
+
     a,
     span {
       color: $text_color;
       font-size: 0.9rem;
       transition: all 0.25s ease-in-out;
     }
+
     a:hover {
       color: $white;
     }
+
     svg {
       width: auto;
       height: 0.9rem;
@@ -123,6 +144,7 @@ footer {
     img {
       max-width: 120px;
     }
+
     p {
       font-family: "AvenirBook";
       font-size: 0.7rem;
@@ -131,38 +153,48 @@ footer {
   }
 
   @media only screen and (max-width: 770px) {
-	padding-bottom: 0;
-	margin-top: 3rem;
+    padding-bottom: 0;
+    margin-top: 3rem;
+    padding-top: 3rem;
+
     .footer_badge {
-	  margin: 0 1rem;
-	  padding: 0.25rem 0.5rem;
+      margin: 0 1rem;
+      padding: 0.25rem 0.5rem;
+
       p {
         font-size: 0.5rem;
       }
     }
+
     .adress_container {
       margin: 0.25rem 0 !important;
+
       a,
       span {
         font-size: 0.5rem;
       }
+
       svg {
         height: 0.35rem;
       }
-	}
-	.footer_logo {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 0.5rem 0;
-		padding-top: 0;
-		img {
-			max-height: 30px;
-		}
-		p {
-			font-size: 0.5rem;
-		}
-	}
+    }
+
+    .footer_logo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem 0;
+      padding-top: 0;
+
+      img {
+        max-height: 30px;
+      }
+
+      p {
+        margin-top: 0.6rem;
+        font-size: 0.5rem;
+      }
+    }
   }
 }
