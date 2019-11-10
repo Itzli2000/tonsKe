@@ -11,6 +11,8 @@
 	<meta name="author" content="Ariel Itzli Molina Sánchez" />
 	<meta name=" theme-color" content="#ffce00">
 	<!-- Bootstrap -->
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<!-- Styles -->
@@ -28,12 +30,14 @@
 			<div class="inner_page">
 				<div class="header_section d-flex flex-row justify-content-around m-0 pt-3">
 					<div class="col-12 d-block d-md-none d-lg-block col-lg-4"></div>
-					<div class="tablet_header col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+					<div
+						class="tablet_header col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
 						<a href="#section_one" class="d-block">
 							<img class="img-fluid logo" src="./assets/images/logo.png" alt="tonske">
 						</a>
 					</div>
-					<div class="tablet_header col-12 col-md-6 d-flex flex-column justify-content-center align-items-start">
+					<div
+						class="tablet_header col-12 col-md-6 d-flex flex-column justify-content-center align-items-start">
 						<div class="description d-flex flex-row justify-content-center align-items-center">
 							<a onclick="scrollToElement('section_two')">forma</a>&nbsp;+&nbsp;
 							<a onclick="scrollToElement('section_three')">color</a>&nbsp;+&nbsp;
@@ -58,7 +62,8 @@
 				</div>
 
 				<!-- Header first section -->
-				<div id="section_one" class="section_container d-flex flex-column justify-content-around">
+				<div id="section_one"
+					class="section_container d-flex flex-column justify-content-center align-items-center">
 
 					<!-- First section -->
 					<div class="information_card">
@@ -289,16 +294,17 @@
 					<div
 						class="d-flex flex-row flex-wrap justify-content-center align-items-center fourth_section_container">
 						<div class="advantages_card">
-							<div class="row">
+							<div class="row justify-content-between">
 								<div
-									class="col-12 col-md-6 d-flex flex-row justify-content-start align-items-center mb-4">
+									class="col-12 col-md-5 d-flex flex-row justify-content-start align-items-center mb-4">
 									<div class="adventage d-flex justify-content-center align-items-center">
 										<img src="./assets/images/concepto2.png" alt="Ventajas concepto">
 									</div>
 									<p class="ml-4 text-left"><span>Expriencia</span> en <br> conceptualización</p>
 								</div>
+								<div class="col-12 col-md-1"></div>
 								<div
-									class="col-12 col-md-6 d-flex flex-row justify-content-end align-items-center mb-4">
+									class="col-12 col-md-5 d-flex flex-row justify-content-end align-items-center mb-4">
 									<div class="adventage d-flex justify-content-center align-items-center">
 										<img src="./assets/images/administracion.png" alt="Ventajas administracion">
 									</div>
@@ -306,21 +312,23 @@
 										creativa</p>
 								</div>
 								<div
-									class="col-12 col-md-6 d-flex flex-row justify-content-start align-items-center mb-4">
+									class="col-12 col-md-5 d-flex flex-row justify-content-start align-items-center mb-4">
 									<div class="adventage d-flex justify-content-center align-items-center">
 										<img src="./assets/images/creatividad.png" alt="Ventajas creatividad">
 									</div>
 									<p class="ml-4 text-left"><span>Creatividad </span> garantizada</p>
 								</div>
+								<div class="col-12 col-md-1"></div>
 								<div
-									class="col-12 col-md-6 d-flex flex-row justify-content-end align-items-center mb-4">
+									class="col-12 col-md-5 d-flex flex-row justify-content-end align-items-center mb-4">
 									<div class="adventage d-flex justify-content-center align-items-center">
 										<img src="./assets/images/divertirnos.png" alt="Ventajas divertirnos">
 									</div>
-									<p class="ml-4 text-left">Nos <span>divertimos</span> <br>haciendo lo que
+									<p class="text-left" style="margin-left: 2rem;">Nos <span>divertimos</span>
+										<br>haciendo lo que
 										<br>hacemos</p>
 								</div>
-								<div class="col-12 col-md-6 d-flex flex-row justify-content-start align-items-center">
+								<div class="col-12 col-md-5 d-flex flex-row justify-content-start align-items-center">
 									<div class="adventage d-flex justify-content-center align-items-center">
 										<img src="./assets/images/optimizacion.png" alt="Ventajas optimizacion">
 									</div>
@@ -428,7 +436,7 @@
 			</div>
 		</div>
 
-		<div id="section_six" class="grid-container w-100">
+		<div id="section_six" class="grid-container w-100 mt-4">
 			<div class="grid-item dg">
 				<p class="inner-grid d-flex justify-content-center align-items-center">dg</p>
 			</div>
@@ -536,8 +544,10 @@
 		<div id="mobile_menu" class="mobile_menu">
 			<ul>
 				<li>
-					<a class="hide_menu" href="#mobile_first" title="menu item"><img
-							src="./assets/images/logo_mobile.png" alt="tonske"></a>
+					<a class="hide_menu" href="#mobile_first" title="menu item">
+						<img src="./assets/images/logo_mobile.png" alt="tonske">
+					</a>
+					<a id="close_menu" href="#nothing"></a>
 				</li>
 				<li>
 					<a class="hide_menu" href="#mobile_third" title="menu item">forma</a>
@@ -654,31 +664,34 @@
 			</div>
 			<div class="advantages_card">
 				<div class="row">
-					<div class="col-12 col-md-6 d-flex flex-row justify-content-start align-items-center">
+					<div
+						class="adventage_container col-12 col-md-6 d-flex flex-row justify-content-start align-items-center">
 						<div class="adventage d-flex justify-content-center align-items-center">
 							<img src="./assets/images/concepto2.png" alt="Ventajas concepto">
 						</div>
 						<p class="ml-4 text-left"><span>Expriencia</span> en <br> conceptualización</p>
 					</div>
-					<div class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+					<div class="adventage_container col-12 col-md-6 d-flex justify-content-start align-items-center">
 						<div class="adventage d-flex justify-content-center align-items-center">
 							<img src="./assets/images/administracion.png" alt="Ventajas administracion">
 						</div>
 						<p class="ml-4 text-left"><span>Administración</span> y <br><span>asesoría</span> creativa</p>
 					</div>
-					<div class="col-12 col-md-6 d-flex flex-row justify-content-start align-items-center">
+					<div
+						class="adventage_container col-12 col-md-6 d-flex flex-row justify-content-start align-items-center">
 						<div class="adventage d-flex justify-content-center align-items-center">
 							<img src="./assets/images/creatividad.png" alt="Ventajas creatividad">
 						</div>
 						<p class="ml-4 text-left"><span>Creatividad </span> garantizada</p>
 					</div>
-					<div class="col-12 col-md-6 d-flex justify-content-start align-items-center">
+					<div class="adventage_container col-12 col-md-6 d-flex justify-content-start align-items-center">
 						<div class="adventage d-flex justify-content-center align-items-center">
 							<img src="./assets/images/divertirnos.png" alt="Ventajas divertirnos">
 						</div>
 						<p class="ml-4 text-left">Nos <span>divertimos</span> <br>haciendo lo que <br>hacemos</p>
 					</div>
-					<div class="col-12 col-md-6 d-flex flex-row justify-content-start align-items-center">
+					<div
+						class="adventage_container col-12 col-md-6 d-flex flex-row justify-content-start align-items-center">
 						<div class="adventage d-flex justify-content-center align-items-center">
 							<img src="./assets/images/optimizacion.png" alt="Ventajas optimizacion">
 						</div>

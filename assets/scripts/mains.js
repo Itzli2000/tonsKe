@@ -4,6 +4,9 @@ $(document).ready(function () {
   $("#mobile_button").click(function () {
     $("#mobile_menu").toggleClass("active");
   });
+  $("#close_menu").click(function () {
+    $("#mobile_menu").toggleClass("active");
+  });
   $(".hide_menu").click(function () {
     $("#mobile_menu").toggleClass("active");
   });
@@ -13,6 +16,10 @@ $(document).ready(function () {
       margin: 0,
       items: 1,
       nav: true,
+      navText: [
+        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+      ],
       dots: true,
       responsiveClass: true
     });
@@ -24,6 +31,10 @@ $(document).ready(function () {
       autoplayTimeout: 1000,
       autoplayHoverPause: true,
       nav: true,
+      navText: [
+        '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+        '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+      ],
       dots: true,
       responsiveClass: true
     });
