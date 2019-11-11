@@ -600,3 +600,27 @@
     background-position: center bottom;
   }
 }
+
+.fa-angle-left {
+  width: 30px;
+  height: 30px;
+  background-image: url('./../images/titulos/flecha_izquierda.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  &:before {
+    content: none;
+  }
+}
+
+.fa-angle-right {
+  width: 30px;
+  height: 30px;
+  background-image: url('./../images/titulos/flecha_derecha.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  &:before {
+    content: none;
+  }
+}
