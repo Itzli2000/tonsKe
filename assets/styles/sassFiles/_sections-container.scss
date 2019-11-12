@@ -281,6 +281,7 @@
 
 #contact_section {
 	.section_container {
+		min-height: 110vh !important;
 		position: relative;
 		padding-top: 85px !important;
 
@@ -361,7 +362,8 @@
 				}
 	
 				a {
-					font-size: 1rem;
+					font-size: 0.8rem;
+					line-height: 0.5rem;
 				}
 			}
 		}
