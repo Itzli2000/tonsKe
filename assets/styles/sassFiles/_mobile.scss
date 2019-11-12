@@ -304,6 +304,7 @@
 
     p {
       font-size: 1rem;
+      line-height: 1.2rem;
 
       span {
         font-size: 1.1rem;
@@ -338,6 +339,11 @@
     padding: 2rem 0;
     margin-bottom: 2rem;
     margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+    img {
+      max-width: 70%;
+    }
   }
 
   .information_card {
@@ -418,10 +424,10 @@
       text-align: right;
 
       img {
-        max-width: 130px;
+        max-width: 140px;
         margin-left: auto;
         margin-bottom: 2rem;
-        margin-right: 15%;
+        margin-right: 12%;
       }
 
       p {

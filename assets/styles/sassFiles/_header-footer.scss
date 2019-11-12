@@ -71,14 +71,14 @@
   }
 
   &.sixth_section {
-    max-width: 1200px !important;
+    max-width: 1200px;
     display: flex !important;
     position: absolute;
     bottom: 11%;
     left: 50%;
     transform: translateX(-50%);
 
-    @media only screen and (max-width: 1440px) {
+    @media only screen and (max-width: 1024px) {
       bottom: 1rem;
     }
   }
@@ -94,7 +94,7 @@
   }
 
   @media only screen and (max-width: 770px) {
-    max-width: 700px;
+    max-width: 700px !important;
     margin-bottom: 0;
   }
 }
@@ -103,7 +103,7 @@
   padding-top: 0 !important;
 
   .footer_section {
-    max-width: 1200px !important;
+    max-width: 1200px;
     display: flex !important;
     position: absolute;
     bottom: 14%;
@@ -182,9 +182,9 @@ footer {
     }
   }
 
-  @media only screen and (max-width: 770px) {
+  @media only screen and (max-width: 767px) {
     padding-bottom: 0;
-    margin-top: 1rem;
+    padding-top: 1rem;
     position: relative;
     margin-bottom: 1.5rem;
 
