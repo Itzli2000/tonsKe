@@ -350,11 +350,13 @@
 				bottom: -4.5rem;
 				right: 0;
 				line-height: 0.8rem;
+				cursor: pointer;
+				z-index: 10000;
 	
 				@media only screen and (max-width: 1024px) {
 					position: relative;
-					bottom: -1rem;
-					right: 0;
+					bottom: -6rem;
+					right: -1.5rem;
 					text-align: right;
 				}
 	
