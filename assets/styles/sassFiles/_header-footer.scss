@@ -181,6 +181,8 @@ footer {
   .footer_logo {
     img {
       max-width: 120px;
+      margin: auto;
+      margin-bottom: 0.7rem;
     }
 
     p {
@@ -228,6 +230,7 @@ footer {
 
       img {
         max-height: 30px;
+        margin-bottom: 0;
       }
 
       p {
