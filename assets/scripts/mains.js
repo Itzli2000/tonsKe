@@ -10,7 +10,7 @@ $(document).ready(function () {
   $(".hide_menu").click(function () {
     $("#mobile_menu").toggleClass("active");
   });
-  try {
+
     $(".owl-carousel").owlCarousel({
       loop: true,
       margin: 0,
@@ -38,8 +38,6 @@ $(document).ready(function () {
       dots: true,
       responsiveClass: true
     });
-  }
-  catch (err) { }
 });
 
 
