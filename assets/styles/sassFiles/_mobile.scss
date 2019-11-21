@@ -605,9 +605,11 @@
       text-align: right;
       line-height: 0.7rem;
       font-size: 0.7rem;
+      z-index: 999999;
 
       a {
         font-size: 0.7rem;
+        z-index: 999999;
       }
     }
 
