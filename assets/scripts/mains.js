@@ -71,7 +71,7 @@ function sendContactMail(event) {
       message => {
         if (message == 'OK') {
           Swal.fire({
-            text: message,
+            text: 'Su mensaje ha sido enviado!',
             confirmButtonText: 'Cerrar'
           })
         }
@@ -122,7 +122,7 @@ function sendMobileContactMail(event) {
       message => {
         if (message == 'OK') {
           Swal.fire({
-            text: message,
+            text: 'Su mensaje ha sido enviado!',
             confirmButtonText: 'Cerrar'
           })
         }
