@@ -45,6 +45,7 @@
 
   .footer_section {
     &.sixth_section {
+      z-index: -1;
       max-width: 1200px;
       width: 90%;
       display: flex !important;

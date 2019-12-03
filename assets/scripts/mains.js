@@ -10,6 +10,9 @@ $(document).ready(function () {
   $(".hide_menu").click(function () {
     $("#mobile_menu").toggleClass("active");
   });
+  $(".hide_menu").click(function () {
+    $("#mobile_menu").toggleClass("active");
+  });
   setInterval(() => {
     $(".owl-carousel").owlCarousel({
       loop: true,
@@ -43,6 +46,86 @@ $(document).ready(function () {
 
 
 
+function sendContactMail(event) {
+  event.preventDefault();
+  let name = document.getElementById('name').value;
+  let phone = document.getElementById('phone').value;
+  let mail = document.getElementById('mail').value;
+  let message = document.getElementById('message').value;
+  if (name.length > 3 && phone.length > 3 && mail.length > 5 && message.length > 5) {
+    let full_message = `<h3>${name} acaba de escribirte</h3>
+  Correo: ${mail}
+  Teléfono: ${phone}
+  Mensaje: ${message}
+  `;
+    console.log(full_message)
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username: "itzli2000",
+      Password: "molinona&9",
+      To: 'itzli2000@msn.com',
+      From: 'itzli2000@gmail.com',
+      Subject: "Contacto desde sitio tonsKe",
+      Body: full_message
+    }).then(
+      message => {
+        Swal.fire({
+          text: message,
+          confirmButtonText: 'Cerrar'
+        })
+      }
+    );
+  }
+  else {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Revisa tus datos',
+      icon: 'error',
+      confirmButtonText: 'Revisar'
+    })
+  }
+}
+
+function sendMobileContactMail(event) {
+  event.preventDefault();
+  let name = document.getElementById('name_mobile').value;
+  let phone = document.getElementById('phone_mobile').value;
+  let mail = document.getElementById('mail_mobile').value;
+  let message = document.getElementById('message_mobile').value;
+  console.log(name.length)
+  if (name.length > 3 && phone.length > 3 && mail.length > 5 && message.length > 5) {
+    let full_message = `<h3>${name} acaba de escribirte</h3>
+    Correo: ${mail}
+    Teléfono: ${phone}
+    Mensaje: ${message}
+    `;
+    console.log(full_message)
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username: "itzli2000",
+      Password: "molinona&9",
+      To: 'itzli2000@msn.com',
+      From: 'itzli2000@gmail.com',
+      Subject: "Contacto desde sitio tonsKe",
+      Body: full_message
+    }).then(
+      message => {
+        Swal.fire({
+          text: message,
+          confirmButtonText: 'Cerrar'
+        })
+      }
+    );
+  }
+  else {
+    Swal.fire({
+      title: 'Error!',
+      text: 'Revisa tus datos',
+      icon: 'error',
+      confirmButtonText: 'Revisar'
+    })
+  }
+}
 
 function scrollToElement(element) {
   var elmnt = document.getElementById(element);

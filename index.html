@@ -20,6 +20,8 @@
 	<link rel="stylesheet" type="text/css" href="./assets/styles/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/styles.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<script src="./assets/scripts/owl.carousel.min.js" type="text/javascript" charset="utf-8" async defer></script>
 </head>
 
@@ -493,7 +495,7 @@
 										<label for="message">mensaje:</label>
 										<input type="text" class="form-control" id="message">
 									</div>
-									<button type="submit" class="btn">enviar</button>
+									<button onclick="sendContactMail(event)" type="submit" class="btn">enviar</button>
 									<div class="privacy">
 										<a href="./privacy.html">Puedes revisar nuestro<br>Aviso de Privacidad</a>
 									</div>
@@ -761,22 +763,22 @@
 			<form>
 				<img class="img-fluid contact_title_image" src="./assets/images/titulos/kecontacto.png">
 				<div class="form-group">
-					<label for="name">nombre:</label>
-					<input type="text" class="form-control" id="name">
+					<label for="name_mobile">nombre:</label>
+					<input type="text" class="form-control" id="name_mobile">
 				</div>
 				<div class="form-group" data-toggle="tooltip" data-placement="left" title="Teléfono: 55-1234-5678">
-					<label for="phone">tel:</label>
-					<input type="tel" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" class="form-control" id="phone">
+					<label for="phone_mobile">tel:</label>
+					<input type="tel" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" class="form-control" id="phone_mobile">
 				</div>
 				<div class="form-group">
-					<label for="mail">mail:</label>
-					<input type="email" class="form-control" id="mail">
+					<label for="mail_mobile">mail:</label>
+					<input type="email" class="form-control" id="mail_mobile">
 				</div>
 				<div class="form-group">
-					<label for="message">mensaje:</label>
-					<input type="text" class="form-control" id="message">
+					<label for="message_mobile">mensaje:</label>
+					<input type="text" class="form-control" id="message_mobile">
 				</div>
-				<button type="submit" class="btn">enviar</button>
+				<button onclick="sendMobileContactMail(event)" type="submit" class="btn">enviar</button>
 				<div class="privacy">
 					<a href="./privacy.html">Puedes revisar nuestro<br>Aviso de Privacidad</a>
 				</div>
