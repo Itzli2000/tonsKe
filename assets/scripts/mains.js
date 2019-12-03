@@ -60,9 +60,7 @@ function sendContactMail(event) {
   `;
     console.log(full_message)
     Email.send({
-      Host: "smtp.gmail.com",
-      Username: "itzli2000",
-      Password: "molinona&9",
+      SecureToken: "959cc12b-7776-4ce4-aabb-9b145a790390",
       To: 'itzli2000@msn.com',
       From: 'itzli2000@gmail.com',
       Subject: "Contacto desde sitio tonsKe",
@@ -101,9 +99,7 @@ function sendMobileContactMail(event) {
     `;
     console.log(full_message)
     Email.send({
-      Host: "smtp.gmail.com",
-      Username: "itzli2000",
-      Password: "molinona&9",
+      SecureToken: "959cc12b-7776-4ce4-aabb-9b145a790390",
       To: 'itzli2000@msn.com',
       From: 'itzli2000@gmail.com',
       Subject: "Contacto desde sitio tonsKe",
